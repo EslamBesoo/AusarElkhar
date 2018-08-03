@@ -1,0 +1,27 @@
+<Alloy>
+	<View class="container">
+		<View top="0" height="1" backgroundColor="#4abfe8"></View>
+		<View width="Titanium.UI.SIZE" class="lh">
+		 <View  id="vCart" onClick="openMyOrder"   width="26%" left="1" top="0">
+			<ImageView class="img" id="imgCart" image="/images/btn/cart.png" ></ImageView>
+			<Label class="lbl" id="lblCart" text="سلة الشراء" bottom="3"></Label>
+		</View>
+		
+		 <View class="vbar"  id="vOrder" onClick="openOrder" >
+			<ImageView class="img" id="imgOrder" image="/images/btn/list.png" height="15"></ImageView>
+			<Label class="lbl" id="lblOrder" text="طلباتي" top="-4"></Label>
+		</View>
+		
+		<View class="vbar"  id="vSearch" onClick="openMap">
+			<ImageView class="img" id="imgSearch" image="/images/btn/search.png" ></ImageView>
+			<Label class="lbl" id="lblSearch" text="البحث"  top="-4"></Label>
+		</View>
+		
+		<View class="vbar"  id="vHome" onClick="openMain" >
+			<ImageView class="img" id="imgMain" image="/images/btn/home.png"></ImageView>
+			<Label class="lbl" id="lblMain" text="الرئيسية" top="-4"></Label>
+		</View>
+		</View>
+		
+	</View>
+</Alloy>

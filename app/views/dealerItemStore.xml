@@ -1,0 +1,9 @@
+<Alloy>
+	<Window class="container" onOpen="intiStore">
+		<View class="container" >
+		<TableView id="tbl" top="65"> 
+			<Require src="/view/footerView"></Require>
+		</TableView>
+	</View>
+	</Window>
+</Alloy>

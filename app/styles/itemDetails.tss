@@ -1,0 +1,150 @@
+
+".container" : {
+  borderColor:"#EEEEEE",
+}
+
+"#logoView":{
+	top:0,
+	backgroundColor:"#ffffff",
+	height:"35%",
+}
+
+"#dataView":{
+	top:0,
+	backgroundColor:"#EEEEEE",
+	height:Titanium.UI.SIZE,
+}
+
+"#btnView":{
+	top:0,
+	backgroundColor:"#e0e0e0",
+	height:40,
+}
+
+
+"#img":{
+	height:"95%",
+}
+
+".imgx":{
+	height:15,
+	width:15
+}
+
+".btnlbl":{
+	color:"#ffffff",
+	font:{fontSize:12,
+	fontFamily: Alloy.Globals.fontType
+	},
+	//left:5
+}
+
+".lblx":{
+	color:"#ffffff",
+	font:{fontSize:12,
+	fontFamily: Alloy.Globals.fontType
+	},
+}
+
+"#lblCountry":{
+	color:"#757575",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+}
+
+"#lblTitle":{
+	top:10,
+	color:"#616161",
+	font:{fontSize:15,
+	fontFamily: Alloy.Globals.fontType
+	},
+}
+
+"#lblPrice":{
+	color:"#f5a623",
+	font:{fontSize:15,
+	fontFamily: Alloy.Globals.fontType
+	},
+	top:-20,
+	left:10,
+}
+
+"#lblDesc":{
+	color:"#757575",
+	width:"95%",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	top:10,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
+
+
+"#lblQty":{
+	//borderColor:"#ffffff",
+	backgroundColor:"#ffffff",
+	color:"#000000",
+	//borderWidth:1,
+	//borderRadius:3,
+	text:1,
+	font:{fontSize:15},
+	width:"30%",
+	height:28,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
+
+
+
+"#cartView":{
+	right:0,
+	backgroundColor:"#f5a623",
+	height:40,
+	width:"50%",
+ 	//borderColor:"#f5a623",
+	//borderWidth:1,
+	//borderRadius:3,
+	//left:7
+}
+
+
+"#lblCart":{
+	color:"#ffffff",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	maxLines:1,
+	left:10,
+	text:"اضافة لسلة الشراء"
+}
+
+"#lblUpdate":{
+	color:"#ffffff",
+	height:40,
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	width:"60%",
+	maxLines:1,
+	left:10,
+	text:" تعديل المنتج ",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	//backgroundColor:"red"
+}
+
+"#lblDelete":{
+	color:"#ffffff",
+	height:40,
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	width:"60%",
+	maxLines:1,
+	left:10,
+	text:" حذف المنتج ",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	//backgroundColor:"yellow"
+}
+
+
+

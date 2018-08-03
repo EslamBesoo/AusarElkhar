@@ -1,0 +1,10 @@
+<resources>
+ <!-- Login -->
+<string name="app_name"> اسر الخير </string>
+<string name="_Pass">كلمة المرور</string>
+<string name="_User">اسم المستخدم</string>
+<string name="_Add">تسجيل الدخول</string>
+<string name="rePass">استعادة كلمة المرور ؟</string>
+<string name="_LoginMsgErr">خطأ في كلمة المرور او اسم المستخدم من فضلك تأكد من البيانات</string>    
+       
+</resources>

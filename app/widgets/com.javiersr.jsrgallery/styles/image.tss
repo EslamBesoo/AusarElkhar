@@ -1,0 +1,9 @@
+"ScrollView" : {
+	maxZoomScale: 5,
+}
+
+"ImageView" : {
+	maxZoomScale:5,
+	width:"100%",
+	defaultImage:"/default2.png"
+}

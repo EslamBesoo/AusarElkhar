@@ -1,0 +1,65 @@
+<Alloy>
+		<Window class="container">
+		<View class="container">
+			<View class="lv" top="60">
+		<View id="logoView">
+			<ImageView id="img"></ImageView>
+		</View>
+		<View id="dataView" class="lv">
+			<Label id="lblTitle"></Label>
+			<Label id="lblPrice" text="مفتوح" ></Label>
+			<Label id="lblDesc"></Label>
+			
+				
+		</View>
+		
+		<View id="btnView">
+			<View id="whatsView" width="25%"  backgroundColor="#2cb742" left="25%" onClick="openWhats">
+				<ImageView id="imgWhats" image="/images/store/whatsapp.png"  class="imgx"></ImageView>
+				<Label id="lblWhats"  class="btnlbl"></Label>
+			</View>
+			
+			<View id="callView" width="25%" left="0" backgroundColor="#4abfe8" onClick="CallComp">
+				<ImageView id="imgCall" image="/images/store/call.png"   class="imgx"></ImageView>
+				<Label id="lblCall"  class="btnlbl"></Label>
+			</View>
+			
+			<View id="callView" width="50%" right="0" backgroundColor="#f6a039">
+				<Label id="lblCompanyName" text="الاسرة" class="btnlbl" ></Label>
+			</View>
+			
+		</View>
+		
+		
+		</View>
+		<View height="40" bottom="0">
+			<View id="cartView" > 
+	         	  <View width="33%" onClick="btnminus" left="0">
+		              	 <ImageView id="btnRemove" image="/images/cart/remove.png"  width="15"></ImageView>
+		           </View>
+		           <Label  id="lblQty"></Label>
+		              
+		           <View width="33%" right="0" onClick="btnplus" >
+		              	 <ImageView id="btnPlus" image="/images/cart/plus.png"   width="15"></ImageView>
+		           </View>
+		    </View>	 
+		     <View width="50%" left="0" backgroundColor="#4abfe8" onClick="add2Cart">
+		     	<Label  id="lblCart" ></Label>
+		              	 <ImageView id="cart" image="/images/btn/other/cart.png"  width="15" right="5"></ImageView>
+		           </View>      
+		</View>
+		
+		<View height="43" bottom="0" id="ControlView" visible="false">
+		     <View width="50%" left="0" backgroundColor="#4abfe8" class="lh">
+		     	<Label  id="lblUpdate" onClick="updateItem"></Label>
+		        <ImageView id="cart" image="/images/btn/other/cart.png"  width="15" left="5"></ImageView>
+		      </View>  
+		      
+		      <View width="50%" right="0" backgroundColor="#4abfe8" class="lh">
+		     	<Label  id="lblDelete" onClick="delItem"></Label>
+		              	 <ImageView id="cart" image="/images/btn/other/cart.png"  width="15" left="5"></ImageView>
+		      </View>      
+		</View>
+	</View>
+	</Window>
+</Alloy>

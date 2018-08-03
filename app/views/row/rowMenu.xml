@@ -1,0 +1,9 @@
+<Alloy>
+	<TableViewRow class="container" id="row">
+		
+	    <View top="0" height="43" backgroundColor="#ffffff" onClick="changeColor" id="vx">
+	    	<ImageView id="img" width="20" height="20" right="10"></ImageView>
+	    	<Label id="lbltitle" right="40" color="#424242" ></Label>
+	    </View>
+	 </TableViewRow>
+</Alloy>

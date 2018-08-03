@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container">
+	<View  id="content" >
+		<TextField id="txtAddress" hintText="من فضلك ادخل العنوان الذي سيتم ارسال الطلب اليه"></TextField>
+		<Label id="lblDonemsg"></Label> 
+		<Button title=" ارسال الطلب " onClick="checkAddress" bottom="120"></Button>
+
+	</View>
+		</Window>
+</Alloy>

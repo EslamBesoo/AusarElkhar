@@ -1,0 +1,5 @@
+<Alloy>
+	<TableView id="tbl" top="0"> 
+			<Require src="/view/footerView"></Require>
+		</TableView>
+</Alloy>

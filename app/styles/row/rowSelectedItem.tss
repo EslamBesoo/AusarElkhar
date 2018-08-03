@@ -1,0 +1,12 @@
+
+".container" : {
+  height:42,
+  backgroundColor:"white"
+}
+"#lbltitle":{
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	height:40,
+	font:{fontSize:15},
+	width:"90%",
+	
+}

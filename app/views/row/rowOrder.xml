@@ -1,0 +1,38 @@
+<Alloy>
+	<TableViewRow class="container lv"  objName="inv" id="row">
+		<View id="view1header" top="6" backgroundColor="#757575" class="View" height="35">
+			<Label id="lblCompName" text="54654654"></Label>
+			<Label id="lblOrderID" text="54654654"  left="10"></Label>
+			
+		</View>
+		<View id="viewDeatialOrder" height="50"  top="0" backgroundColor="#EEEEEE" >
+			
+				
+				
+				<View width="30%" left="0" class="lv">
+				<Label text="تاريخ الطلب" top="0"></Label>
+				<Label id="lblDate" text="28-12-2017" top="2"></Label>
+				</View>
+				
+				<View width="30%" class="lv">
+				<Label text="الإجمالي" top="0"></Label>
+				<Label class="lbl" id="lblTotal" text="55" top="2"></Label>
+				</View>
+				
+				
+				<View width="35%" right="0" class="lv">
+				<Label text="الحالة" top="0"></Label>
+				<Label class="lbl" id="lblCase" text="جاري التجهير" top="2"></Label>
+				</View>
+				
+				
+		
+		</View>
+		<View id="viewfooterOrder" top="0" height="30" backgroundColor="#EEEEEE">
+				<Label id="lblCompPhone" text="54654654" onClick="CallComp"></Label>
+			<ImageView id="imgCall" image="/images/call/baseline_call_white_18.png" left="5" onClick="CallComp"></ImageView>
+				<Label right="10" text="تفاصيل الطلب" onClick="getItem"></Label>
+		</View>
+		
+	</TableViewRow>
+</Alloy>

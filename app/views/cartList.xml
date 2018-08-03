@@ -1,0 +1,15 @@
+<Alloy>
+	<Window class="container">
+		<View id="content">
+			<TableView id="tbl" top="57" onClick="gotoItemDetails">
+				<Require src="/view/footerView"></Require>
+			</TableView>
+			 <View id="vbtnBar" zIndex="10000" bottom="1" width="100%" backgroundColor="#ffffff"  height="40" borderColor="#f6a039">
+            <!--<ImageView left="10" image="/images/cart.png" onClick="sendOrder"></ImageView> -->
+            <Label id="btnSend"  onClick="SendItem" ></Label>
+             <Label id="lblTotal"></Label>
+             <Label id="lblPriceTotal"  ></Label>
+        </View>
+		</View>
+	</Window>
+</Alloy>

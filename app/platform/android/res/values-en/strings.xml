@@ -1,0 +1,11 @@
+<resources>
+	<!-- Login -->
+<string name="app_name"> اسر الخير </string>
+<string name="_Pass">Password</string>
+<string name="_User">Username</string>
+<string name="_Add">Sign In</string>
+<string name="rePass">Forget your password ?</string>
+<string name="_LoginMsgErr">Username or password incorrect, please make sure this data </string>   
+
+
+</resources>

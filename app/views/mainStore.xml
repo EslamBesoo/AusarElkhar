@@ -1,0 +1,18 @@
+<Alloy>
+	<Window class="container">
+		<View class="container">
+			<View class="lv" top="57" zIndex="1100"> 
+				<View id="dealerDataView">
+				
+				<Label id="lblTitle"> </Label>
+				
+				<Button title="تعديل" left="10" bottom="5" width="70" height="30"></Button>
+				 <View height="1" backgroundColor="#4abfe8" bottom="0"></View>
+			</View>
+			<ImageView id="imgNews" image="/img/user.png" ></ImageView>
+			<TableView id="tbl" top="20" ></TableView>
+			 </View>
+			
+		</View>
+	</Window>
+</Alloy>

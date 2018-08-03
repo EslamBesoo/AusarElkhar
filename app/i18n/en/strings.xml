@@ -1,0 +1,88 @@
+<resources>
+	<string name="app_name">اسر الخير</string>
+	<!-- Login -->
+
+<string name="_Pass">Password</string>
+<string name="_User">Username</string>
+<string name="_Add">Sign In</string>
+<string name="rePass">Forget your password ?</string>
+<string name="_LoginMsgErr">Username or password incorrect, please make sure this data </string>   
+
+<!-- Recovery Password -->
+<string name="txt_Email">E-mail</string>
+<string name="_recPasshint">Please entre you email address to send verification Code</string>
+<string name="btn_Send">Send</string>
+
+<string name="txt_Code">Code</string>
+<string name="txt_NewPass">New password</string>
+<string name="txt_ConfPass">Confirm password</string>
+<string name="btn_Done">Done</string>
+
+<!-- Add News -->
+<string name="txt_NewsTitle">News head title</string>
+<string name="lbl_newsImg">Choose file to be the news picture</string>
+<string name="txt_details">Details</string>
+<string name="btn_Publish">Publish</string>
+
+<string name="lbl_UpdateNews">Update news data</string>
+<string name="btn_Save">Save</string>
+<string name="btn_Del">Delete</string>
+<string name="btn_Up">Update</string>
+
+<!-- Add New Offer -->
+<string name="txt_OfferTitle">Ad. title</string>
+<string name="lbl_OfferImg">You cat add up to 10 photos for your ad.</string>
+<string name="lbl_Country">Country</string>
+<string name="lbl_City">City</string>
+<string name="lbl_price">Price</string>
+<string name="lbl_Type">Type</string>
+<string name="lbl_Perpose">Perpose</string>
+<string name="txt_detailsOffer">Order detials</string>
+<string name="lbl_updateOffer">Update order data</string>
+
+<!-- Add New Request -->
+<string name="txt_RequestTitle">Request title</string>
+<string name="lbl_updateRequest">Update request data</string>
+<string name="txt_detailsrequest">Request detials</string>
+
+<!-- Edite Profile -->
+<string name="txt_Username">Username</string>
+<string name="txt_officeName">Office name</string>
+<string name="txt_officeDesc">Office description</string>
+<string name="txt_EmailAddress">Email address</string>
+<string name="txt_Address">Address</string>
+<string name="txt_phone">Phone number</string>
+<string name="txt_profilePic">Profile Picture</string>
+<string name="txt_CoverPhoto">Cover photo</string>
+<string name="txt_Map">Map location</string>
+<string name="txt_pass">Password</string>
+<string name="txt_confPass">Confirm password</string>
+<string name="btn_Save">Save</string>
+<string name="btn_pass">Change Password</string>
+<string name="msg_ProfilePassDone">Data updated</string>
+<string name="msg_compPass">Password does not match</string>
+
+
+<!-- Side Menu -->
+<string name="lbl_profile">Edit profile</string>
+<string name="lbl_home">Home</string>
+<string name="lbl_ListAds">Real states</string>
+<string name="lbl_AddAds">My real state</string>
+<string name="lbl_ListReq">My Request</string>
+<string name="lbl_AddReq">Add new request </string>
+<string name="lbl_ListNews">News</string>
+<string name="lbl_AddNews">Add news</string>
+<string name="lbl_Setting">Setting</string>
+
+
+<!-- Setting -->
+<string name="lbl_notifi">Notifications</string>
+<string name="lbl_lang">Language</string>
+<string name="lbl_share">Share application</string>
+<string name="lbl_rate">Rate application on google play store</string>
+<string name="lbl_Language">عربي</string>
+<string name="lbl_Home">My account</string>
+<string name="lbl_logout">Logout</string>
+<string name="con_net">No internet connection please try agen leter</string>
+
+</resources>

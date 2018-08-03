@@ -1,0 +1,33 @@
+<Alloy>
+	<Window class="container">
+		<View backgroundImage="/images/splashnologo.png" >
+			
+			<ScrollView class="lv" scrollType="vertical"  layout="vertical"   top="70" >
+				<ImageView id="imgNews" image="/img/camera.png" onClick="openOption" ></ImageView>
+				<TextField id="txtUser" hintText="الاسم بالكامل"></TextField>
+				<TextField id="txtPhone" hintText="رقم التليفون" keyboardType="Titanium.UI.KEYBOARD_TYPE_PHONE_PAD"></TextField>
+				<TextField id="txtEmail" hintText="البريد الإلكتروني" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
+				<TextField id="txtPassword" hintText="كلمة المرور " passwordMask="true"></TextField>
+				<TextField id="txtNo" hintText=" الرقم القومي " passwordMask="true"></TextField>
+				<TextField id="txtAddress" hintText=" العنوان "></TextField>
+				<View height="Titanium.UI.SIZE" width="90%" top="10">
+						<ImageView image="/images/ic-down-menu.png" right="5"></ImageView>
+						<Label className="null" id="lblCity" onClick="getCountry" objName=" اختر البلد" text=" اختر البلد" class="lblAdd" backgroundColor="#ffffff"> </Label>
+						<View class="vl" height="1" backgroundColor="#E0E0E0"></View>
+			</View>
+			
+			<View height="Titanium.UI.SIZE" width="90%" top="10">
+						<ImageView image="/images/ic-down-menu.png" right="5"></ImageView>
+						<Label className="null" id="lblArea" onClick="getCity" objName=" اختر المدينة" text=" اختر المدينة" class="lblAdd" backgroundColor="#ffffff"> </Label>
+						<View class="vl" height="1" backgroundColor="#E0E0E0"></View>
+			</View>
+				
+			<View top="15"  height="100">
+				<Button id="btnAdd" title="تسجيل تاجر جديد" width="60%" onClick="reg" top="10" backgroundColor="#4abfe8" borderColor="#4abfe8"></Button>
+				<OptionDialog id="options"  onClick="optionDialogClicked" />
+			</View>
+		</ScrollView>
+		
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,46 @@
+".container" : {
+  height:95,
+ backgroundColor:"#ffffff",
+  
+}
+
+"#itemView":{
+	bottom:0,
+	backgroundColor:"#EEEEEE",
+	height:85,
+	width:"95%",
+ 	borderColor:"#EEEEEE",
+	borderWidth:1,
+	borderRadius:5,
+}
+
+
+"#img":{
+	height:80,
+	width:80,
+	right:10
+}
+
+
+
+"#lblDesc":{
+	color:"#757575",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	maxLines:2,
+	top:35,
+	right:100
+}
+
+"#lblTitle":{
+	color:"#424242",
+	font:{fontSize:16,
+	fontFamily: Alloy.Globals.fontType
+	},
+	top:10,
+	maxLines:1,
+	right:100
+}
+
+

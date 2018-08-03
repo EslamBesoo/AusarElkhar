@@ -1,0 +1,9 @@
+
+".container" : {
+  backgroundColor:"transparent"
+}
+
+"#lbltitle":{
+	font:{fontSize:20},
+
+}

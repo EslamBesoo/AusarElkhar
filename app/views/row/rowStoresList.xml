@@ -1,0 +1,31 @@
+<Alloy>
+	<View class="container lv" onClick="getStoreItem">
+		<View id="logoView">
+			<ImageView id="img"></ImageView>
+		</View>
+		<View id="dataView" class="lv">
+			<Label id="lblTitle"></Label>
+			<Label id="lblCountry"></Label>
+			
+			<View height="40" top="10">
+				<ImageView id="imgWhats" image="/images/store/location.png" right="5" class="imgx"></ImageView>
+				<Label id="lblLocation" text="يبعد 500 متر" class="lblx" color="#757575"  right="25"></Label>
+				
+				<ImageView id="imgWhats" image="/images/store/open.png" left="10"  class="imgx"></ImageView>
+				
+			</View>
+		</View>
+		
+		<View id="btnView">
+			<View id="whatsView" width="50%" right="0" backgroundColor="#2cb742" onClick="openWhats">
+				<ImageView id="imgWhats" image="/images/store/whatsapp.png"  class="imgx"></ImageView>
+				<Label id="lblWhats"  class="btnlbl"></Label>
+			</View>
+			
+			<View id="callView" width="50%" left="0" backgroundColor="#4abfe8" onClick="CallComp">
+				<ImageView id="imgCall" image="/images/store/call.png"   class="imgx"></ImageView>
+				<Label id="lblCall"  class="btnlbl"></Label>
+			</View>
+		</View>
+	</View>
+</Alloy>

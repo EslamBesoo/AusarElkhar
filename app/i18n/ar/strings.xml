@@ -1,0 +1,90 @@
+<resources>
+ <!-- Login -->
+<string name="app_name">اسر الخير</string>
+<string name="_Pass">كلمة المرور</string>
+<string name="_User">اسم المستخدم</string>
+<string name="_Add">تسجيل الدخول</string>
+<string name="rePass">استعادة كلمة المرور ؟</string>
+<string name="_LoginMsgErr">خطأ في كلمة المرور او اسم المستخدم من فضلك تأكد من البيانات</string>    
+  
+ <!-- Recovery Password -->
+<string name="txt_Email">البريد الإلكتروني</string>
+<string name="_recPasshint">من فضلك ادخل البريد الإلكتروني لإرسال كود التحقق </string>
+<string name="btn_Send">ارسال</string>
+
+<string name="txt_Code">الكود</string>
+<string name="txt_NewPass">كلمة الرور الجديدة</string>
+<string name="txt_ConfPass">تأكيد كلمة المرور</string>
+<string name="btn_Done">حفظ</string>     
+
+<!-- Add News -->
+<string name="txt_NewsTitle">عنوان الخبر</string>
+<string name="lbl_newsImg">اختر صورة للخبر</string>
+<string name="txt_details">تفاصيل الخبر</string>
+<string name="btn_Publish">نشر</string>
+
+<string name="lbl_UpdateNews">تعديل بيانات الخبر</string>
+<string name="btn_Save">حفظ</string>
+<string name="btn_Del">حذف</string>
+<string name="btn_Up">تعديل</string>
+
+
+
+<!-- Add New Offer -->
+<string name="txt_OfferTitle">عنوان العرض</string>
+<string name="lbl_OfferImg">يمكنك اضافة حتي ١٠ صور للإعلان .</string>
+<string name="lbl_Country">البلد</string>
+<string name="lbl_City">المدينة</string>
+<string name="lbl_price">السعر</string>
+<string name="lbl_Type">نوع العملية</string>
+<string name="lbl_Perpose">نوع العقار</string>
+<string name="lbl_updateOffer">تعديل بيانات العرض</string>
+<string name="txt_detailsOffer">تفاصيل العرض</string>
+
+
+<!-- Add New Request -->
+<string name="txt_RequestTitle">عنوان الطلب</string>
+<string name="lbl_updateRequest">تعديل بيانات الطلب</string>
+<string name="txt_detailsrequest">تفاصيل الطلب</string>
+
+
+<!-- Edite Profile -->
+<string name="txt_Username">اسم المستخدم</string>
+<string name="txt_officeName">اسم المكتب</string>
+<string name="txt_officeDesc">تفاصيل المكتب</string>
+<string name="txt_EmailAddress">البريد الإلكتروني</string>
+<string name="txt_Address">العنوان</string>
+<string name="txt_phone">رقم التليفون</string>
+<string name="txt_profilePic">اللوجو</string>
+<string name="txt_CoverPhoto">البانر</string>
+<string name="txt_Map">موقعك ع الخريطة</string>
+<string name="txt_pass">كلمة المرور</string>
+<string name="txt_confPass">اعادة كلمة المرور</string>
+<string name="btn_Save">حفظ</string>
+<string name="btn_pass">تغير كلمة المرور</string>
+<string name="msg_ProfilePassDone">تم حفظ البيانات</string>
+<string name="msg_compPass">كلمة المرور غير متطابقة</string>
+
+<!-- Side Menu -->
+<string name="lbl_profile">تعديل بياناتي</string>
+<string name="lbl_home">الرئيسية</string>
+<string name="lbl_ListAds">اعلاناتي</string>
+<string name="lbl_ListReq">طلباتي</string>
+<string name="lbl_AddAds">اضافة اعلان </string>
+<string name="lbl_AddReq">اضافة طلب </string>
+<string name="lbl_ListNews">الاخبار</string>
+<string name="lbl_AddNews">اضافة خبر</string>
+<string name="lbl_Setting">الاعدادات</string>
+
+<!-- Setting -->
+<string name="lbl_notifi">الاشعارات</string>
+<string name="lbl_lang">اللغة</string>
+<string name="lbl_share">مشاركة التطبيق</string>
+<string name="lbl_rate">قيم التطبيق علي متجر جوجل</string>
+<string name="lbl_Language">English</string>
+<string name="lbl_logout">تسجيل الخروج</string>
+<string name="lbl_Home">حسابي</string>
+
+
+<string name="con_net">لايوجد اتصال بالانترنت يرجي المحاولة في وقت لاحق</string>
+</resources>

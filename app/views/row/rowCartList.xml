@@ -1,0 +1,28 @@
+<Alloy>
+	<TableViewRow class="container" id="row">
+	    <View id="rowx">
+	    	 <Label id="lblname"  objName="data"></Label>
+			 <ImageView id="proimg" ></ImageView>
+			   <View width="50" height="50" onClick="btnminus" left="0" top="0">
+		              	<ImageView id="btnDel" image="/images/cart/del.png" top="5" left="5" width="20" height="20" onClick="DelProduct"></ImageView>
+		           </View>
+	         
+	       <View height="Titanium.UI.SIZE" top="30" right="83">
+		              <Label class="lblMain" objName="data" text=" السعر :"></Label>
+		              <Label class="lblSub" id="lblprice" objName="data"></Label>
+		              <Label id="curType" class="lblSub" objName="data" right="70"></Label>
+	       </View>
+	       
+	        <View id="cartView" > 
+	         	  <View width="33%" onClick="btnminus" left="0" backgroundColor="#f6a039">
+		              	 <ImageView id="btnRemove" image="/images/cart/remove.png"  width="15"></ImageView>
+		           </View>
+		           <Label  id="lblQty"></Label>
+		              
+		           <View width="33%" right="0" onClick="btnplus" backgroundColor="#4abfe8">
+		              	 <ImageView id="btnPlus" image="/images/cart/plus.png"   width="15"></ImageView>
+		           </View>
+		    </View>	         
+	    </View>
+	    </TableViewRow>
+</Alloy>

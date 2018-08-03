@@ -1,0 +1,25 @@
+
+".container" : {
+	backgroundColor:"#ebebeb"
+ 
+}
+
+"#img":{
+	width:60,
+	height:60,
+	//right:44,
+	//borderRadius:"50",
+	//borderWidth:1,
+	//borderColor:"#0091EA",
+	image:"/img/user.png"
+}
+
+"#officeName":{
+	font:{fontSize:20},
+	color:"#4abfe8",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	width:Titanium.UI.SIZE,
+	bottom:"10%",
+	//right:50
+	
+}

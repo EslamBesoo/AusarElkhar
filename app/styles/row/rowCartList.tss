@@ -1,0 +1,73 @@
+".container" : {
+  height:95,
+ backgroundColor:"#ffffff",
+  
+}
+
+"#rowx":{
+	bottom:0,
+	backgroundColor:"#EEEEEE",
+	height:85,
+	width:"95%",
+ 	borderColor:"#EEEEEE",
+	borderWidth:1,
+	borderRadius:5,
+}
+
+"#proimg":{
+	height:75,
+	width:70,
+	right:7,
+	top:5,
+	borderColor:"#EDE7F6",
+	borderWidth:1,
+	defaultImage:"/images/menubackground.png"
+}
+
+"#lblname":{
+	top:5,
+	right:83,
+	font:{fontSize:14},
+	color:"#424242",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
+}
+
+".lblMain":{
+	right:0,
+	font:{fontWeight: 'bold',fontSize:12},
+	color:"#424242",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+}
+
+".lblSub":{
+	right:45,
+	font:{fontSize:13},
+	color:"#f6a039",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
+}
+
+"#lblQty":{
+	//borderColor:"#ffffff",
+	backgroundColor:"#ffffff",
+	color:"#f6a039",
+	//borderWidth:1,
+	//borderRadius:3,
+	font:{fontSize:15},
+	width:"30%",
+	height:30,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
+
+
+
+"#cartView":{
+	left:5,
+	bottom:5,
+	//backgroundColor:"#BDBDBD",
+	height:30,
+	width:"40%",
+ 	borderColor:"#EEEEEE",
+	borderWidth:1,
+	borderRadius:3,
+	//left:7
+}

@@ -1,0 +1,17 @@
+<Alloy>
+		<View class="hApp"  zIndex="1000">
+       
+          
+          <View width="100"  backgroundColor="transparent"  right="0">
+            <ImageView  id="iconHeader" image="/images/ic_menu.png" right="10" bottom="15"></ImageView>
+          </View>
+            
+             <Label id="lblTitle" class="lbl_title" text="my Title" ></Label>
+             
+             <View width="100"  backgroundColor="transparent"  left="0">
+            <ImageView image="/images/btn/cart.png" left="10"  bottom="15"></ImageView>
+              <Label id="lblCount" text="15"></Label>
+          </View>
+          <View height="1" backgroundColor="#4abfe8" bottom="0"></View>
+   </View>
+</Alloy>

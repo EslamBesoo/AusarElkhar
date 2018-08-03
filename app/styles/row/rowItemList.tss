@@ -1,0 +1,74 @@
+
+".container" : {
+  height:140,
+ backgroundColor:"#ffffff",
+  
+}
+
+"#itemView":{
+	bottom:0,
+	backgroundColor:"#EEEEEE",
+	height:130,
+	width:"95%",
+ 	borderColor:"#EEEEEE",
+	borderWidth:1,
+	borderRadius:5,
+}
+
+"#cartView":{
+	bottom:10,
+	backgroundColor:"#4abfe8",
+	height:35,
+	width:"45%",
+ 	borderColor:"#4abfe8",
+	borderWidth:1,
+	borderRadius:3,
+	left:10
+}
+
+"#img":{
+	//height:70,
+	width:70,
+	right:10
+}
+
+"#lblPrice":{
+	color:"#f5a623",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	bottom:10,
+	right:90
+}
+
+"#lblDesc":{
+	color:"#757575",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	left:10,
+	maxLines:2,
+	top:35,
+	right:90
+}
+
+"#lblTitle":{
+	color:"#424242",
+	font:{fontSize:16,
+	fontFamily: Alloy.Globals.fontType
+	},
+	top:10,
+	maxLines:1,
+	right:90
+}
+
+"#lblCart":{
+	color:"#ffffff",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	maxLines:1,
+	left:10,
+	text:"اضافة لسلة الشراء"
+}
+

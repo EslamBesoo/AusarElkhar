@@ -1,0 +1,42 @@
+
+".container" : {
+  backgroundColor:"#ffffff"
+}
+
+"#dealerDataView":{
+	
+	top:0,
+	height:60,
+	backgroundColor:"#ebebeb"
+}
+
+"#imgNews":{
+	right:10,
+	zIndex:2000,
+	height:60,
+	width:60,
+	borderRadius:30,
+	borderWidth:1,
+	top:-30,
+	backgroundColor:"#ffffff",
+	borderColor:"#ebebeb"
+	
+}
+
+'#lblTitle': {
+	font:{fontWeight: 'bold',fontSize:"15dp"},
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	color:"#424242",
+	right:10,
+	top:0,
+	text:"ساعات سويسري"
+}
+
+'#lblname': {
+	font:{fontSize:14},
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	color:"#424242",
+	right:10,
+	bottom:10,
+	text:"ساعات سويسري"
+}

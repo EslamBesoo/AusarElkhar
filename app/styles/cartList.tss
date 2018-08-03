@@ -1,0 +1,45 @@
+
+".container" : {
+  
+}
+
+
+"#lblTotal":{
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	text:"0",
+	color:"#EF6C00",
+	font: {
+	fontWeight: 'bold',
+	fontSize:"14"
+	},
+	right:75,
+}
+
+"#lblPriceTotal":{
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	text:" الاجمالي :",
+	color:"#424242",
+	font: {
+	fontWeight: 'bold',
+	fontSize:"14"
+	},
+	right:10,
+	
+}
+
+"#btnSend":{
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+    backgroundColor:"#f6a039",
+	text:"تابع عملية الشراء",
+	color:"white",
+	font: {
+	fontWeight: 'bold',
+	fontSize:"14"
+	},
+	left:0,
+	width:"40%",
+	height:50,
+	//borderColor:"#f6a039",
+	//borderRadius:7,
+	//borderWidth:2
+}

@@ -1,0 +1,17 @@
+<Alloy>
+    <Window  layout="vertical" platform="ios">
+      <View height="30%" class="container">
+             <ImageView id="img" ></ImageView>
+             <Label id="officeName" text=" زائر"></Label>
+        </View>
+        <TableView backgroundColor="#ffffff" id="tableView" separatorColor="transparent" ></TableView>
+    </Window>
+    
+     <View  layout="vertical" class="vandro" platform="android">
+        <View height="30%" class="container">
+             <ImageView id="img"  ></ImageView>
+            <Label id="officeName" text=" زائر"></Label> 
+        </View>
+        <TableView backgroundColor="#ffffff" id="tableView" separatorColor="transparent" ></TableView>
+    </View>
+</Alloy>

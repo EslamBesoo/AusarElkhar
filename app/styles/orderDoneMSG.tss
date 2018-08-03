@@ -1,0 +1,33 @@
+
+".container" : {
+  
+}
+"#lblDonemsg":{
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	color:"#4d4d4f",
+	width:"90%",
+	//top:10,
+	font:{
+	    //fontWeight: 'bold',
+		fontSize:15,
+		},
+	
+	
+}
+
+
+
+
+// Setting TextField
+'TextField': {
+	color:"#424242",
+	backgroundColor:"#ebebeb",
+	borderColor:"#ebebeb",
+	borderWidth:1,
+	font:{fontSize:14},
+	width:"90%",
+	height:35,
+    top:80,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
+	
+}

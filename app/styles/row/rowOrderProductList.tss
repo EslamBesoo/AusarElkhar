@@ -1,0 +1,63 @@
+".container" : {
+  height:110,
+ backgroundColor:"#ffffff",
+  
+}
+
+"#itemView":{
+	bottom:0,
+	backgroundColor:"#EEEEEE",
+	height:100,
+	width:"95%",
+ 	borderColor:"#EEEEEE",
+	borderWidth:1,
+	borderRadius:5,
+}
+
+"#cartView":{
+	bottom:10,
+	backgroundColor:"#4abfe8",
+	height:35,
+	width:"45%",
+ 	borderColor:"#4abfe8",
+	borderWidth:1,
+	borderRadius:3,
+	left:10
+}
+
+"#img":{
+	right:10,
+	height:70,
+	width:70,
+	
+}
+
+"#lblPrice":{
+	color:"#f5a623",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	top:40,
+	right:90,
+}
+
+"#lblDesc":{
+	color:"#757575",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	maxLines:2,
+	bottom:10,
+	right:90,
+}
+
+"#lblTitle":{
+	color:"#212121",
+	font:{fontSize:16,
+	fontFamily: Alloy.Globals.fontType
+	},
+	top:10,
+	right:90,
+	maxLines:1,
+}
+

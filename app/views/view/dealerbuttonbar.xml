@@ -1,0 +1,28 @@
+<Alloy>
+	<View class="container">
+		<View top="0" height="1" backgroundColor="#4abfe8"></View>
+		<View width="Titanium.UI.SIZE" class="lh">
+			
+		 <View  id="vItem" onClick="openAddItem"   width="26%" left="1" top="0">
+			<ImageView class="img" id="imgItem" image="/img/add.png" ></ImageView>
+			<Label class="lbl" id="lblItem" text="اضافة منتج" bottom="3"></Label>
+		</View> 
+		
+		 <View class="vbar"  id="vOrder" onClick="openOrder" >
+			<ImageView class="img" id="imgOrder" image="/images/btn/list.png" height="15"></ImageView>
+			<Label class="lbl" id="lblOrder" text="طلباتي" top="-4"></Label>
+		</View>
+		
+		<View class="vbar"  id="vStore" onClick="openAddStore">
+			<ImageView class="img" id="imgStore" image="/img/add.png" ></ImageView>
+			<Label class="lbl" id="lblStore" text="اضافة محل"  top="-4"></Label>
+		</View>
+		
+		<View class="vbar"  id="vHome" onClick="openMain" >
+			<ImageView class="img" id="imgMain" image="/images/btn/home.png"></ImageView>
+			<Label class="lbl" id="lblMain" text="ادارة المحلات" top="-4"></Label>
+		</View>
+		</View>
+		
+	</View>
+</Alloy>

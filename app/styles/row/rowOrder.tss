@@ -1,0 +1,68 @@
+
+".container" : {
+  height:130,
+  backgroundColor:"#ffffff"
+}
+
+'Label': {
+	color:"black",
+	font:{
+		fontSize:12,
+		},
+		textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER	
+}
+'.lbl': {
+	color:"black",
+	font:{
+		fontWeight: 'bold',
+		fontSize:12,
+		},
+		textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER	
+}
+
+"#lblDate":{
+	color:"#9E9E9E",
+	font:{
+		fontWeight: 'bold',
+		//fontSize:12,
+		},
+		textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER	
+}
+"#lblOrderID":{
+	color:"#ffffff",
+	font:{
+		//fontWeight: 'bold',
+		fontSize:14,
+		},
+		textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER	
+}
+
+"#lblCompName":{
+	color:"#ffffff",
+	font:{
+		//fontWeight: 'bold',
+		fontSize:16,
+		},
+		right:20,
+		textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+		//backgroundColor:"yellow"	
+}
+
+"#lblCompPhone":{
+	color:"#424242",
+	font:{
+		//fontWeight: 'bold',
+		fontSize:14,
+		},
+		left:20,
+		textAlign:Titanium.UI.TEXT_ALIGNMENT_LEFT,
+		//backgroundColor:"red"		
+}
+
+".View":{
+    width:"90%" ,
+    height:35,
+	borderRadius:10,
+	borderWidth:1,
+	borderColor:"#E1F5FE"
+}

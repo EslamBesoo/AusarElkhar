@@ -1,0 +1,31 @@
+
+".container" : {
+  
+}
+'#lblTitle': {
+	color:"#4abfe8",
+	font:{fontWeight: 'bold',fontSize:18},
+	bottom:15,
+	//backgroundColor:"red"
+	
+}
+
+
+"#lblCount":{
+	color:"white",
+	font:{
+		//fontWeight: 'bold',
+		fontSize:11
+		},
+	backgroundColor:"#EF5350",
+	borderColor:"#f44336",
+	borderRadius:7,
+	borderWidth:1,
+	//width:12,
+	left:16,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	bottom:25	,
+	height:12,
+	width:12
+	
+}

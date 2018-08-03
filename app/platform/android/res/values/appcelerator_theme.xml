@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="appcelerator" parent="@style/Theme.AppCompat">
+		<item name="colorPrimary">#ebebeb</item>
+		<item name="colorAccent">#ebebeb</item>
+		<item name="android:statusBarColor">#ebebeb</item>
+		<item name="android:navigationBarColor">#ebebeb</item>
+		
+	</style>
+	<style name="appcelerator.NoActionBar" parent="@style/Theme.AppCompat.Light">
+        <!-- AppCompat Compatibility -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#ebebeb</item>
+        <item name="colorAccent">#ebebeb</item>
+        <item name="android:navigationBarColor">#ebebeb</item> 
+    </style>
+
+</resources>
+
+

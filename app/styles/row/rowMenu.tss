@@ -1,0 +1,18 @@
+
+".container" : {
+  height:45,
+  backgroundColor:"#E0E0E0"
+}
+
+"#lbltitle":{
+	font:{
+		fontSize:16
+	},
+	color:"#284f25",
+	//backgroundColor:"red",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	width:"50%",
+}
+
+
+

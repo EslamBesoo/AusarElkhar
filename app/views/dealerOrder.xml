@@ -1,0 +1,9 @@
+<Alloy>
+	<Window class="container">
+		<View id="content" backgroundColor="white">
+			<TableView id="tbl" top="57"  onClick="getItems">
+				<Require src="/view/footerView"></Require>
+			</TableView>
+		</View>
+	</Window>
+</Alloy>

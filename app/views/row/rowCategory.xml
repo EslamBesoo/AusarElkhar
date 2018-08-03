@@ -1,0 +1,12 @@
+<Alloy>
+	<TableViewRow class="container">
+		
+		<View height="145" width="95%" onClick="go2Store" borderColor="#ffffff">
+			
+			<ImageView id="img"></ImageView>
+			<View id="viewCover"></View>
+			<Label id="lbltitle"></Label>
+			
+		</View>
+	</TableViewRow>
+</Alloy>

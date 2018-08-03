@@ -1,0 +1,23 @@
+<Alloy>
+	<Window class="container">
+		<View backgroundImage="/images/splashnologo.png">
+		<ScrollView class="lv" scrollType="vertical"  layout="vertical"   top="0" >
+				<ImageView image="/images/logo.png" top="70"></ImageView>	
+			<View class="lv" id="ctrl"  height="Titanium.UI.SIZE" top="30">
+				<TextField id="txtEmail" hintText="البريد الإلكتروني" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
+				<TextField id="txtPassword" hintText="كلمة المرور " passwordMask="true"></TextField>
+				<Label id="recPass" text="نسيت كلمة المرور" color="red" top="10" width="90%" textAlign="Titanium.UI.TEXT_ALIGNMENT_RIGHT"  onClick="getoPassRec"> </Label>
+				
+				
+				<View height="10"></View>
+			</View>
+			<View id="btnPord" class="lv"  top="5" >
+				<Button title="تسجيل الدخول" onClick="loginUser" backgroundColor="#4abfe8" borderColor="#4abfe8"></Button>
+				<Button id="btnFace" title="انشاء مستخدم جديد" top="10"  backgroundColor="#f6a039" borderColor="#f6a039" onClick="go2reg"></Button>
+				<Button id="btnFace" title="انشاء تاجر جديد" top="10"  backgroundColor="#ffffff" borderColor="#4abfe8" onClick="go2regDealer" color="#4abfe8"></Button>
+			</View>
+			
+		</ScrollView>
+		</View>
+	</Window>
+</Alloy>

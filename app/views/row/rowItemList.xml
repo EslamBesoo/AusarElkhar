@@ -1,0 +1,14 @@
+<Alloy>
+	<TableViewRow class="container">
+		<View id="itemView">
+			<ImageView id="img" onClick="go2Details"></ImageView>
+			<Label id="lblTitle" onClick="go2Details"></Label>
+			<Label id="lblDesc" onClick="go2Details"></Label>
+			<Label id="lblPrice"></Label>
+			<View id="cartView" onClick="updateQtyValue">
+				<Label id="lblCart"></Label>
+				<ImageView id="imgCart" image="/images/btn/other/cart.png" right="5" width="15"></ImageView>
+			</View>
+		</View>
+	</TableViewRow>
+</Alloy>

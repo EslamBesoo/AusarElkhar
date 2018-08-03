@@ -1,0 +1,68 @@
+
+".container" : {
+  height:200,
+  width:"46%",
+  left:"2%",
+  borderColor:"#EEEEEE",
+  borderWidth:1,
+  borderRadius:5,
+  bottom:0
+  
+}
+
+"#logoView":{
+	top:0,
+	backgroundColor:"#ffffff",
+	height:90,
+}
+
+"#dataView":{
+	top:0,
+	backgroundColor:"#EEEEEE",
+	height:80,
+}
+
+"#btnView":{
+	top:0,
+	backgroundColor:"#e0e0e0",
+	height:30,
+}
+
+
+"#img":{
+	height:"95%",
+}
+
+".imgx":{
+	height:15,
+	width:15
+}
+
+".btnlbl":{
+	color:"#ffffff",
+	font:{fontSize:12,
+	fontFamily: Alloy.Globals.fontType
+	},
+	//left:5
+}
+
+".lblx":{
+	color:"#ffffff",
+	font:{fontSize:12,
+	fontFamily: Alloy.Globals.fontType
+	},
+}
+
+"#lblCountry":{
+	color:"#757575",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+}
+
+"#lblTitle":{
+	color:"#616161",
+	font:{fontSize:15,
+	fontFamily: Alloy.Globals.fontType
+	},
+}

@@ -1,0 +1,15 @@
+<Alloy>
+	<Window class="container">
+		<View id="content" backgroundColor="white">
+			<View id="orderDataView" class="lv">
+				<Label id="lblOrderID"></Label>
+				<Label id="lblOrderDate"></Label>
+				<Label id="lblOrderCost"></Label>
+				<Label id="lblOrderAddress"></Label>
+			</View>
+			<TableView id="tbl" top="170" >
+				<Require src="/view/footerView"></Require>
+			</TableView>
+		</View>
+	</Window>
+</Alloy>

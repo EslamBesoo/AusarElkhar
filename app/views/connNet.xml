@@ -1,0 +1,7 @@
+<Alloy>
+	<View class="container lv" zIndex="100000" top="0">
+		<ImageView image="/img/net.jpg" width="40%" top="100"></ImageView>
+		<Label text="L('con_net')" top="20"></Label>
+		<Button title="retry"  onClick="closeme" visible="false"></Button>
+	</View>
+</Alloy>

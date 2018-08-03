@@ -1,0 +1,21 @@
+<Alloy>
+	<Window class="container">
+		<View class="container">
+				<View height="40" top="57" class="lh" zIndex="10000" id="subCat" onClick="xme" backgroundColor="#ebebeb">
+					<View id="tab1" width="48%" objName="0">
+						<Label id="lblOffice" text="عن الأسرة" objName="0"></Label>
+						<View height="2" bottom="0" width="100%" backgroundColor="#4abfe8" objName="0" visible="true"></View>
+					</View>
+					<View id="tab2" width="48%" objName="1">
+						<Label id="lblOffice" text="المنتجات" objName="1"></Label>
+						<View height="2" bottom="0" width="100%" backgroundColor="#4abfe8" objName="1" visible="false"></View>
+					</View> 
+				
+			</View> 
+			
+			<ScrollableView  id="form"  width="100%"  layout="vertical"  scrollType="vertical" top="98"  onScrollend="test">
+			</ScrollableView>
+		</View>
+	</Window>
+	
+</Alloy>

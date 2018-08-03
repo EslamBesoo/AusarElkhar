@@ -1,0 +1,31 @@
+
+".container" : {
+  backgroundColor:"#ebebeb",
+  height:50,
+  bottom:0,
+  zIndex:30000
+}
+
+".vbar":{
+	top:"0",
+	width:"24%",
+	layout:"vertical",
+	left:1
+	
+}
+
+".img":{
+	top:7,
+	height:18,
+	width:18,
+	//defaultImage:"/img/logohome@xxxhdpi.png",
+}
+
+".lbl":{
+	bottom:0,
+	font:{fontSize:14},
+	
+	//color:"#ff2e56"
+	color:"#4abfe8",
+	//backgroundColor:"blue"
+}
