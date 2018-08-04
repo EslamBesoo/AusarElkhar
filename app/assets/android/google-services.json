@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "873638285814",
+    "firebase_url": "https://osarelkheir-client.firebaseio.com",
+    "project_id": "osarelkheir-client",
+    "storage_bucket": "osarelkheir-client.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873638285814:android:24a829c83a1164b5",
+        "android_client_info": {
+          "package_name": "com.isapapps.osarelkheir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873638285814-7jiff2on0k6l2i8ql0s455fee7b06s5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY_QiyS_qg5hFv5tpZpTbHzhZefeJJAaE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
