@@ -1,3 +1,5 @@
+//comment eslam
+
 var xs=require("FWService");
 var drawer;
 Alloy.Globals.Navigator = {
