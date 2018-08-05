@@ -5,30 +5,30 @@ var FirebaseCore = require('firebase.core');
 var fcm = require('firebase.cloudmessaging');
 var geo = require('ti.geolocation.helper');
 var _Service=require("xhrService");
-	_Service.getservice(function(_response){
-				 
-		    	if (_response.success) {
-		    		    try{
-					var responseData= _response.data.Data;
-				
-						Ti.API.info('category: '+JSON.stringify(responseData));
-						//$.tbl.appendRow(Alloy.createController('view/advSlider',_response.data.Data.Adv).getView() , true);
-						for (var i=0; i < responseData.length; i++) {
-							 var rowItem= responseData[i];
-							 var rowController=Alloy.createController('row/rowCategory',rowItem);
-							 $.tbl.appendRow(rowController.getView() , true);
-						};//End for
-						responseData=null;
-						rowItem=null;
-						rowController=null;
-					
-						}catch(e){};//if nout found internet not view error 
-				}
-				else{
-					toast("لا يوجد محلات في هذه المنطقة ");
-				};
-	},"get_category","itemList",$.mainApp);
-try{			
+      _Service.getservice(function(_response){
+                         
+                  if (_response.success) {
+                            try{
+                              var responseData= _response.data.Data;
+                        
+                                    Ti.API.info('category: '+JSON.stringify(responseData));
+                                    //$.tbl.appendRow(Alloy.createController('view/advSlider',_response.data.Data.Adv).getView() , true);
+                                    for (var i=0; i < responseData.length; i++) {
+                                           var rowItem= responseData[i];
+                                           var rowController=Alloy.createController('row/rowCategory',rowItem);
+                                           $.tbl.appendRow(rowController.getView() , true);
+                                    };//End for
+                                    responseData=null;
+                                    rowItem=null;
+                                    rowController=null;
+                              
+                                    }catch(e){};//if nout found internet not view error 
+                        }
+                        else{
+                              toast("لا يوجد محلات في هذه المنطقة ");
+                        };
+      },"get_category","itemList",$.mainApp);
+try{              
       if (OS_ANDROID) {
             FirebaseCore.configure({
              file: "google-services.json"});
@@ -60,30 +60,30 @@ fcm.createNotificationChannel({
 });
        
 Ti.API.info('createNotificationChannel Done android');
-var CloudPush = require('ti.cloudpush');
-CloudPush.showTrayNotificationsWhenFocused = true;
-CloudPush.debug = true;
-CloudPush.focusAppOnPush = true;
-// CloudPush.retrieveDeviceToken({
-    // success: function deviceTokenSuccess(e) {
-        // // Use this device token with Ti.Cloud.PushNotifications calls
-        // // to subscribe and unsubscribe to push notification channels
-        // Ti.API.info('Device Token: ' + e.deviceToken);
-    // },
-    // error: function deviceTokenError(e) {
-        // alert('Failed to register for push! ' + e.error);
-    // }
+// var CloudPush = require('ti.cloudpush');
+// CloudPush.showTrayNotificationsWhenFocused = true;
+// CloudPush.debug = true;
+// CloudPush.focusAppOnPush = true;
+// // CloudPush.retrieveDeviceToken({
+    // // success: function deviceTokenSuccess(e) {
+        // // // Use this device token with Ti.Cloud.PushNotifications calls
+        // // // to subscribe and unsubscribe to push notification channels
+        // // Ti.API.info('Device Token: ' + e.deviceToken);
+    // // },
+    // // error: function deviceTokenError(e) {
+        // // alert('Failed to register for push! ' + e.error);
+    // // }
+// // });
+// // These events monitor incoming push notifications
+// CloudPush.addEventListener('callback', function (evt) {
+    // alert(evt.payload);
 // });
-// These events monitor incoming push notifications
-CloudPush.addEventListener('callback', function (evt) {
-    alert(evt.payload);
-});
-CloudPush.addEventListener('trayClickLaunchedApp', function (evt) {
-    Ti.API.info('Tray Click Launched App (app was not running)');
-});
-CloudPush.addEventListener('trayClickFocusedApp', function (evt) {
-    Ti.API.info('Tray Click Focused App (app was already running)');
-});
+// CloudPush.addEventListener('trayClickLaunchedApp', function (evt) {
+    // Ti.API.info('Tray Click Launched App (app was not running)');
+// });
+// CloudPush.addEventListener('trayClickFocusedApp', function (evt) {
+    // Ti.API.info('Tray Click Focused App (app was already running)');
+// });
 };
 
 fcm.addEventListener('didRefreshRegistrationToken', onToken);

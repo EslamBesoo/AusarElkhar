@@ -76,7 +76,8 @@ Alloy.Globals.loading.show(L("Loading ...."),false);
 						}
 				},
 		onload : function(e) {
-				Ti.API.debug(this.resposeText);
+			//Ti.API.info('function: '+JSON.stringify(e));
+				//Ti.API.info(this.resposeText);
 				try{ Alloy.Globals.loading.hide();}catch(e){};
 				Alloy.Globals.prototype._write(fileName,JSON.parse(this.responseText));
 				_callBack({
