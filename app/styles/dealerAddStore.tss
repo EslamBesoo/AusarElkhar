@@ -27,7 +27,7 @@
 
 'TextArea': {
 	color:"#424242",
-	backgroundColor:"#ffffff",
+	backgroundColor:"#ebebeb",
 	borderColor:"#ebebeb",
 	borderWidth:1,
 	font:{fontSize:14},
@@ -45,4 +45,9 @@
 "#imgNews":{
 	height:60,
 	
+}
+
+
+"#viewUser":{
+	height:"40"
 }

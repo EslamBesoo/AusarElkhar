@@ -10,7 +10,9 @@
 				 <View height="1" backgroundColor="#4abfe8" bottom="0"></View>
 			</View>
 			<ImageView id="imgNews" image="/img/user.png" ></ImageView>
-			<TableView id="tbl" top="20" ></TableView>
+			<TableView id="tbl" top="10" >
+				<Require src="/view/footerView"></Require>
+			</TableView>
 			 </View>
 			
 		</View>
