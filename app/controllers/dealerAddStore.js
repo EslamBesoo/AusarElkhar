@@ -8,10 +8,10 @@ function reg(){
 		toast("من فضلك املاء كل البيانات");
 		} else{
 			if (args.type=="update") {
-			updateItemData("edit_product");
+			updateItemData("edit_store");
 			
-			}else{addNewItem("add_product");}
-			};
+			}else{addNewItem("add_store");}
+		};
 };
 
 function getCategory(){ 
@@ -19,7 +19,6 @@ function getCategory(){
 			 	title:$.lblCategory.objName,
 			 	param:"cat",
 			 	cont:$.lblCategory,
-			 	cID:$.lblStore.className
 		 	};
 		 	//alert(JSON.stringify(x));
    Alloy.createController("popupWin",x).getView().open(); 
@@ -132,12 +131,15 @@ Ti.Android.requestPermissions(permissions, function(e) {
 
 function addNewItem(url){
 	var x={
-		product_id:args.data.proudct_id,
 		name:$.txtTitle.value,
-		price:$.txtPrice.value,
-		details:$.txtDesc.value,
-		store_id:$.lblStore.className,
-		category_id:$.lblCategory.className,
+		lat:"30.116516516",
+		lon:"31.515616516",
+		phone:$.txtPrice.value,
+		address:$.txtDesc.value,
+		user_id:Ti.App.Properties.getString("userstoreID"),
+		category_id:[3,2,1],//$.lblCategory.className,
+		country_id:$.lblCity.className,
+		city_id:$.lblArea.className,
 		img:$.imgNews.toImage()
 		};
 	try{
@@ -150,7 +152,7 @@ function addNewItem(url){
            
              
              
-}else{toast(_response.data.Massage);};//end if Flag
+			}else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if
     },url,$.dealerCreateUser,x,"add_product");
     }catch(e){alert(e.message);};
@@ -185,12 +187,17 @@ function updateItemData(url){
 
 if (args.type=="update") {
 	$.btnAdd.title=args.title;
-	Ti.API.info('Update ITem Data: '+JSON.stringify(args.data));
+	Ti.API.info('Update ITem Data: '+JSON.stringify(args));
 	$.txtTitle.value=args.data.name;
-	$.txtPrice.value=args.data.price;
-	$.txtDesc.value=args.data.details;
+	$.txtPrice.value=args.data.phone;
+	$.txtAddress.value=args.data.address;
 	$.imgNews.image=args.data.image;
-	$.lblStore.className=args.data.store_id;
-	$.lblCategory.className=args.data.category_id;
+	$.lblCity.className=args.data.country_id;
+	$.lblCity.text=args.data.country_name;
+	
+	$.lblArea.className=args.data.city_id;
+	$.lblArea.text=args.data.city_name;
+	//$.lblCategory.className=args.data.category_id;
+	//$.lblCategory.className=args.data.category_id;
 	
 };

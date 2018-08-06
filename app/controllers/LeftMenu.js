@@ -14,6 +14,7 @@ var rowCount;
        
         {title: " طلباتي",img:"/images/btn/list.png"},
         {title:" سلة الشراء",img:"/images/btn/cart.png"},
+        {title:"ادارة المحلات",img:"/images/btn/home.png"},
          {title:"تسجيل الدخول",img:"/img/login.png"},
          
     ];
@@ -52,15 +53,19 @@ var rowCount;
                 break;
             case 3:
              closeAllWin();
-               var x={title:data[e.index].title};
-               Alloy.Globals.Navigator.open("loginUser",x); 
-               
+             if ((Ti.App.Properties.getString("userstoreID")==null) || (Ti.App.Properties.getString("userstoreID")=="undefined")){
+			 var xx={title:"تسجيل الدخول",data:x,back:true};
+ 			 Alloy.Globals.Navigator.open("loginUser",xx); 
+		}else{
+               var x={title:data[e.index].title,userType:"dealer"};
+               Alloy.Globals.Navigator.open("mainStore",x); 
+              }
                 break;
                 
                 case 4:
                 closeAllWin();
                var x={title:data[e.index].title};
-               Alloy.Globals.Navigator.open("quranRadio",x); 
+             Alloy.Globals.Navigator.open("loginUser",x); 
                 
                 break;
                  

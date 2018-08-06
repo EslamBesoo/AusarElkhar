@@ -1,10 +1,22 @@
 <Alloy>
 	<TableViewRow class="container">
-		<View id="itemView" onClick="getStore">
-			<ImageView id="img" ></ImageView>
-			<Label id="lblTitle"></Label>
-			<Label id="lblDesc"></Label>
-			
+		<View id="itemView">
+			<ImageView id="img" onClick="getStore"></ImageView>
+			<Label id="lblTitle" onClick="getStore"></Label>
+			<Label id="lblDesc" onClick="getStore"></Label>
+			 
+			<View height="40" bottom="0" id="ControlView">
+		     <View width="50%" left="0" backgroundColor="#4abfe8" class="lh" bottom="0">
+		     	<Label  id="lblUpdate" onClick="updateItem"></Label>
+		        <ImageView id="cart" image="/img/ic_border_color_white_24dp.png"  width="15" left="5"></ImageView>
+		      </View>  
+		      
+		      <View width="50%" right="0" backgroundColor="#f5a623" class="lh" bottom="0">
+		     	<Label  id="lblDelete" onClick="delItem"></Label>
+		              	 <ImageView id="cart" image="/img/ic_delete_white_24dp.png"  width="15" left="5"></ImageView>
+		      </View>      
 		</View>
+		</View>
+		
 	</TableViewRow>
 </Alloy>
