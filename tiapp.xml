@@ -1,3 +1,30 @@
+
+Skip to content
+
+    Pull requests
+    Issues
+    Marketplace
+    Explore
+
+    @EslamBesoo
+
+1
+0
+
+    1
+
+EslamBesoo/AusarElkhar
+Code
+Issues 0
+Pull requests 0
+Projects 0
+Wiki
+Insights
+Settings
+AusarElkhar/tiapp.xml
+00e23f5 2 days ago
+@EslamBesoo EslamBesoo add ios notification
+141 lines (140 sloc) 7.86 KB
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.isapapps.osarelkheir</id>
@@ -70,6 +97,10 @@
                 <false/>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleDefault</string>
+                <key>UIBackgroundModes</key>
+                <array>
+                    <string>remote-notification</string>
+                </array>
             </dict>
         </plist>
     </ios>
@@ -100,13 +131,19 @@
         <module platform="iphone">hyperloop</module>
         <module platform="commonjs">ti.cloud</module>
         <module platform="iphone">dk.napp.drawer</module>
+        <module platform="iphone">firebase.core</module>
+        <module platform="android">firebase.core</module>
+        <module platform="iphone">firebase.cloudmessaging</module>
+        <module platform="android">firebase.cloudmessaging</module>
+        <module platform="android" version="11.0.40">ti.playservices</module>
+        <module platform="android">ti.cloudpush</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
     </deployment-targets>
-    <sdk-version>7.3.0.v20180727082501</sdk-version>
+    <sdk-version>7.2.1.v20180726150551</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
