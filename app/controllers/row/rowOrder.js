@@ -10,13 +10,12 @@ if (args.id==0) {
 }else if (args.id==1) {
 	$.lblCase.text="جاري التجهير";
 	$.lblCase.color="#2c9047";
+	
 }else if (args.id==2) {
-	$.lblCase.text="يالطريق اليك";
-	$.lblCase.color="#2c9047";
-}else {
 	$.lblCase.text="تم التوصيل";
 	$.lblCase.color="#000000";
-};
+	$.view1header.backgroundColor="#2c9047";
+}else {};
 Ti.API.info('args prder: '+JSON.stringify(args));
 
 $.lblCompName.text=args.storeData.name;
@@ -30,7 +29,7 @@ function CallComp(){
 
 
 function getItem(){
-	 var x={title:"تفاصيل الطلب",back:true,id:args.data.cart_id,data:args.data,userType:args.userType};
+	 var x={title:"تفاصيل الطلب",back:true,id:args.data.cart_id,data:args.data,userType:args.userType,status:$.lblCase.text};
    		Alloy.Globals.Navigator.open("OrderProductList",x); 
 };
 
@@ -40,4 +39,7 @@ if (OS_IOS) {
 	$.view1header.width=(w*.90);
 	$.viewDeatialOrder.width=(w*.85);
 	$.viewfooterOrder.width=(w*.85);
+}else{
+	$.viewDeatialOrder.width="85%";
+	$.viewfooterOrder.width="85%";
 };

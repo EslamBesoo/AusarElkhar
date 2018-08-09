@@ -33,8 +33,16 @@ function init(){
 		 			  datax=null;
 		 			  
 		 			  
-				}else{toast(_response.data.Massage);};//end if Flag
-             }else{toast(_response.data.Massage);};//end if
+				}else{
+					Ti.API.info('list Item '+JSON.stringify(_response));
+					toast(_response.data.Massage);
+					
+					};//end if Flag
+             }else{
+             	Ti.API.info('list Item '+JSON.stringify(_response));
+             	toast(_response.data.Massage);
+             	
+             	};//end if
     },"get_proudct",$.itemList,x,"itemList");
     }catch(e){alert(e.message);};
 };

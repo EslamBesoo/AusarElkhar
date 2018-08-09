@@ -74,4 +74,17 @@
 	//backgroundColor:"yellow"
 }
 
+"#lblStatus":{
+	color:"#ffffff",
+	height:40,
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType
+	},
+	width:"60%",
+	maxLines:1,
+	left:10,
+	text:" فتح / اغلاق  ",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	//backgroundColor:"yellow"
+}
 

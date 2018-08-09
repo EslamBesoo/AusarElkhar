@@ -1,0 +1,31 @@
+
+".container" : {
+  
+}
+
+// Setting TextField
+'TextField': {
+	color:"#424242",
+	backgroundColor:"#ebebeb",
+	borderColor:"#ebebeb",
+	borderWidth:1,
+	font:{fontSize:14},
+	width:"90%",
+	height:35,
+    top:10,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
+	
+}
+
+'TextArea': {
+	color:"#424242",
+	backgroundColor:"#ebebeb",
+	borderColor:"#ebebeb",
+	borderWidth:1,
+	font:{fontSize:14},
+	width:"90%",
+	height:100,
+	top:10,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
+	
+}

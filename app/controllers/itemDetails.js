@@ -4,7 +4,7 @@ $.img.image=args.data.image;
 $.lblTitle.text=args.data.name;
 $.lblDesc.text=args.data.details+"\n";
 $.lblPrice.text=args.data.price+" "+currancyType;
-$.lblCompanyName.text=" اسرة  "+storName;
+$.lblCompanyName.text=" اسرة  "+args.data.store_name;
 
 Ti.API.info('ItemDetails: '+JSON.stringify(args.data));
 

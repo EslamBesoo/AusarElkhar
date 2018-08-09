@@ -4,14 +4,21 @@
 			<ImageView id="img" onClick="getStore"></ImageView>
 			<Label id="lblTitle" onClick="getStore"></Label>
 			<Label id="lblDesc" onClick="getStore"></Label>
+			 <ImageView id="imgStatus" image="/images/store/open.png" left="10"  class="imgx"></ImageView>
 			 
 			<View height="40" bottom="0" id="ControlView">
-		     <View width="50%" left="0" backgroundColor="#4abfe8" class="lh" bottom="0">
+				
+				<View width="42%" right="0" backgroundColor="#4abfe8" class="lh" bottom="0">
+		     	<Label  id="lblStatus" onClick="closeStore"></Label>
+		              
+		      </View>    
+				
+		     <View width="29%" left="0" backgroundColor="#4abfe8" class="lh" bottom="0">
 		     	<Label  id="lblUpdate" onClick="updateItem"></Label>
 		        <ImageView id="cart" image="/img/ic_border_color_white_24dp.png"  width="15" left="5"></ImageView>
 		      </View>  
 		      
-		      <View width="50%" right="0" backgroundColor="#f5a623" class="lh" bottom="0">
+		      <View width="29%" left="29%"  backgroundColor="#f5a623" class="lh" bottom="0">
 		     	<Label  id="lblDelete" onClick="delItem"></Label>
 		              	 <ImageView id="cart" image="/img/ic_delete_white_24dp.png"  width="15" left="5"></ImageView>
 		      </View>      

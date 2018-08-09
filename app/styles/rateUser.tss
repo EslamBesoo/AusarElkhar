@@ -1,0 +1,32 @@
+
+".container" : {
+  
+}
+
+"#txtSearch":{
+	width:"90%",
+	hintText:" اكتب تعليقك ",
+	height:80,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	
+}
+
+"#btnSearch":{
+	width:"40%",
+	title:" ارسال ",
+	
+	
+}
+
+"#rateView":{
+	height:Titanium.UI.SIZE,
+	top:170,
+	//backgroundColor:"red",
+	width:Titanium.UI.SIZE
+}
+
+
+"ImageView":{
+	left:10,
+	width:30
+}

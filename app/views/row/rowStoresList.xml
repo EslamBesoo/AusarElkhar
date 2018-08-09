@@ -1,9 +1,10 @@
 <Alloy>
-	<View class="container lv" onClick="getStoreItem">
-		<View id="logoView">
+	<View class="container lv">
+		<View id="logoView"  onClick="getStoreItem">
 			<ImageView id="img"></ImageView>
+			<ImageView id="imgRelable" width="15" height="15" image="/images/store/don.png" left="10" top="10" zIndex="1000"></ImageView>
 		</View>
-		<View id="dataView" class="lv">
+		<View id="dataView" class="lv"  onClick="getStoreItem">
 			<Label id="lblTitle"></Label>
 			<Label id="lblCountry"></Label>
 			
@@ -11,7 +12,7 @@
 				<ImageView id="imgWhats" image="/images/store/location.png" right="5" class="imgx"></ImageView>
 				<Label id="lblLocation" text="يبعد 500 متر" class="lblx" color="#757575"  right="25"></Label>
 				
-				<ImageView id="imgWhats" image="/images/store/open.png" left="10"  class="imgx"></ImageView>
+				<ImageView id="imgStatus" image="/images/store/open.png" left="10"  class="imgx"></ImageView>
 				
 			</View>
 		</View>

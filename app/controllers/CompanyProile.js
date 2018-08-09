@@ -15,8 +15,16 @@ function xme(x){
  $.form.scrollToView(1);
  
 function test(e){
+	if ($.form.getCurrentPage()==1) {
+		$.CompanyProile.children[0].children[3].bottom=0;
+	}else{
+		$.CompanyProile.children[0].children[3].bottom=-100;
+	};
+	Ti.API.info(JSON.stringify($.CompanyProile.children[0].children[3].id));
    for (var i=0; i < $.subCat.getChildren().length; i++) {
          $.subCat.children[i].children[1].visible=false;
     };
    $.subCat.children[$.form.getCurrentPage()].children[1].visible=true;
 };
+
+

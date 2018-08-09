@@ -1,0 +1,14 @@
+<Alloy>
+	<Window class="container">
+		<View id="content" backgroundColor="#ffffff">
+			<ScrollView class="lv"  top="80" height="Titanium.UI.FILL">
+				<TextField hintText="الاسم" id="txtName"></TextField>
+				<TextField hintText="البريد الإلكتروني" id="txtEmail" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
+				<TextField hintText="عنوان الرسالة" id="txtTitle"></TextField>
+				<TextArea hintText="التفاصيل" id="txtNotes" ></TextArea>
+				<Button title="ارسال " id="btnSend" width="40%" top="50" onClick="checkControl"></Button>
+				<View height="60" top="20"></View>
+			</ScrollView>
+		</View>
+	</Window>
+</Alloy>

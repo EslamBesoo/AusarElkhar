@@ -49,7 +49,9 @@
 	left:10,
 	maxLines:2,
 	top:35,
-	right:90
+	right:90,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
+	
 }
 
 "#lblTitle":{

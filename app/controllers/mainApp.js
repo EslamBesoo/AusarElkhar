@@ -1,7 +1,6 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 var FirebaseCore = require('firebase.core');
-
 var fcm = require('firebase.cloudmessaging');
 var geo = require('ti.geolocation.helper');
 var _Service=require("xhrService");

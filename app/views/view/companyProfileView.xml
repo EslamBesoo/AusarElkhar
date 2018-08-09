@@ -1,5 +1,6 @@
 <Alloy>
-		<View class="container lv">
+	<View height="Titanium.UI.SIZE">
+		<ScrollView class="lv" scrollType="vertical"  layout="vertical"   top="20" visible="true">
 		<View id="logoView">
 			<ImageView id="img"></ImageView>
 		</View>
@@ -7,22 +8,47 @@
 			<Label id="lblTitle"></Label>
 			<Label id="lblCountry"></Label>
 			
+			<Label id="lblDesc"></Label>
+			
 			<View height="40" top="10">
 				<ImageView id="imgWhats" image="/images/store/open.png" left="60"  class="imgx"></ImageView>
 				<Label id="lblLocation" text="مفتوح" class="lblx" color="#757575"  left="10"></Label>
 				
+				<ImageView id="imgRelable" class="imgx"image="/images/store/don.png" zIndex="1000" right="10"> </ImageView>
+				<Label id="lblRelable" text="موثوق" class="lblx" color="#757575"  right="35"></Label>
 			</View>
 		</View>
+		
+		
+			<View height="85" top="10" backgroundColor="#EEEEEE">
+			<TextArea id="txtSearch"></TextArea>
+		</View>
+		<View id="rateView" class="lh">
+			<ImageView class="img" id="img1" image="/images/store/star.png" onClick="img1"></ImageView>
+			<ImageView class="img" id="img2" image="/images/store/star.png" onClick="img2"></ImageView>
+			<ImageView class="img" id="img3" image="/images/store/star.png" onClick="img3"></ImageView>
+			<ImageView class="img" id="img4" image="/images/store/star.png" onClick="img4"></ImageView>
+			<ImageView class="img" id="img5" image="/images/store/star.png" onClick="img5"></ImageView>
+		</View>
+		<View top="10" height="180">
+			<Label id="lblterms"></Label>
+			<Label id="lblterms" text="اوافق" right="50" top="50" color="#616161" onClick="termsRate"></Label>
+			<ImageView id="imgTerms" top="53"  onClick="termsRate"></ImageView>
+			<Button id="btnSearch" onClick="sendComment"></Button>
+		</View>
+		
+		
+		</ScrollView>
 		
 		<View id="btnView">
 			<View id="whatsView" width="33%"  backgroundColor="#2cb742" onClick="openWhats">
 				<ImageView id="imgWhats" image="/images/store/whatsapp.png"  class="imgx"></ImageView>
-				<Label id="lblWhats"  class="btnlbl"></Label>
+				<Label id="lblWhats" text="واتس اب" class="btnlbl"></Label>
 			</View>
 			
 			<View id="callView" width="33%" left="0" backgroundColor="#4abfe8"  onClick="CallComp">
 				<ImageView id="imgCall" image="/images/store/call.png"   class="imgx"></ImageView>
-				<Label id="lblCall"  class="btnlbl"></Label>
+				<Label id="lblCall" text="هاتف" class="btnlbl"></Label>
 			</View>
 			
 			<View id="callView" width="33%" right="0" backgroundColor="#f6a039">
@@ -31,5 +57,5 @@
 			</View>
 			
 		</View>
-	</View>
+		</View>
 </Alloy>

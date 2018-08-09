@@ -73,33 +73,38 @@
 	
 }
 "ImageView":{
-	defaultImage:"/img/11.jpg"
+	defaultImage:"/img/11.jpg",
+	//enableZoomControls:true
 }
 // Setting TextField
 'TextField': {
 	color:"#424242",
-	backgroundColor:"#f8f9de",
-	borderColor:"#f8f9de",
+	backgroundColor:"#ebebeb",
+	borderColor:"#ebebeb",
 	borderWidth:1,
-	font:{fontSize:15},
+	font:{fontSize:14},
 	width:"90%",
-	height:40,
-	textAlign:Alloy.Globals.isRTL
-	
+	height:Titanium.UI.SIZE,
+	top:10,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	hintType:Titanium.UI.HINT_TYPE_ANIMATED,
+	TextFieldPadding:10
 }
 
 // Setting TextArea
 'TextArea': {
 	color:"#424242",
-	backgroundColor:"#ffffff",
-	borderColor:"#E5E5E5",
+	backgroundColor:"#ebebeb",
+	borderColor:"#ebebeb",
 	borderWidth:1,
-	height:"70",
+	height:90,
+	top:10,
 	width:"90%",
 	font:{
 		//fontWeight: 'bold',
-		fontSize:"14dp"},
-	textAlign:Alloy.Globals.isRTL
+		fontSize:14},
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	hintType:Titanium.UI.HINT_TYPE_ANIMATED
 	
 }
 

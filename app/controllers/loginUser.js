@@ -34,14 +34,14 @@ function loginUserData(){
 		              	
 		              Ti.App.Properties.setString("userID",datax.user_id);
 		              Ti.App.Properties.setString("userName",datax.fullname);
-		              Ti.App.fireEvent("activeUser");
+		             
 		              Ti.App.Properties.setString("userType","User");
 		              closeAll();
 		              var x={title:"سلة الشراء",back:true};
 	    				Alloy.Globals.Navigator.open("cartList",x); 
 };
 		 			  datax=null;
-		 			  
+		 			   Ti.App.fireEvent("activeUser");
 		 			  
 				}else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if

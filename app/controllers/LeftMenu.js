@@ -16,6 +16,12 @@ var rowCount;
         {title:" سلة الشراء",img:"/images/btn/cart.png"},
         {title:"ادارة المحلات",img:"/images/btn/home.png"},
          {title:"تسجيل الدخول",img:"/img/login.png"},
+         {title:"",img:""},
+         {title:" اتصل بنا ",img:"/img/mail.png"},
+         {title:" عن التطبيق ",img:"/img/info.png"},
+         {title:" سياسة الخصوصية ",img:"/img/data-privacy.png"},
+         {title:" شارك التطبيق ",img:"/img/share.png"},
+         
          
     ];
     rowCount=data.length;
@@ -69,16 +75,29 @@ var rowCount;
                 
                 break;
                  
-                case 5:
+                case 6:
                 closeAllWin();
                var x={title:data[e.index].title};
-               //Alloy.Globals.Navigator.open("quranRadio",x); 
+               Alloy.Globals.Navigator.open("contactUs",x); 
                 
                 break;
-                 
-           
                 
-              
+                case 7:
+                closeAllWin();
+               var x={title:data[e.index].title,url:"get_about"};
+               Alloy.Globals.Navigator.open("policeAbout",x); 
+                
+                break;
+                case 8:
+                closeAllWin();
+              var x={title:data[e.index].title,url:"get_police"};
+               Alloy.Globals.Navigator.open("policeAbout",x);  
+               break;
+               
+                case 9:
+                closeAllWin();
+              shareMe();
+               break;
         }
 
 if (OS_IOS) {
@@ -123,6 +142,17 @@ if (OS_IOS) {
                          var winx= appSec[i];
                          Ti.API.info('winx: '+winx.id);
                           	winx.close();
+                          	 Ti.App.fireEvent("activeUser");
+                 }catch(e){};
+                };
+                 for (var i=0; i < mainSec.length; i++) {
+                 try{
+                 	
+                         var winx= mainSec[i];
+                         if (winx.id=="mainStore") {
+                          	winx.close();
+                          	};
+                          	 
                  }catch(e){};
                 };
                 
@@ -141,5 +171,42 @@ if (OS_IOS) {
                 };
     };
     
-   
+   Ti.App.addEventListener("activeUser",activeUser);
+activeUser();
+
+function activeUser(){
+	if ((Ti.App.Properties.getString("userID")==null) || (Ti.App.Properties.getString("userID")=="undefined")) {
+			 $.officeName.text="زائـــر";
+			// Ti.API.info('leftMenu: '+JSON.stringify($.tableView.data[0].rows[6].visible=false)); 
+			 // $.tableView.data[0].rows[6].children[0].visible=false;
+			  //$.tableView.data[0].rows[6].children[1].visible=false;
+			  //$.tableView.data[0].rows[6].children[2].visible=false;
+		}else{
+			$.officeName.text=Ti.App.Properties.getString("userName");
+		};
+		
+		if ((Ti.App.Properties.getString("userstoreID")==null) || (Ti.App.Properties.getString("userstoreID")=="undefined")) {
+			 $.officeName.text="زائـــر";
+		}else{
+			$.officeName.text=Ti.App.Properties.getString("userstoreName");
+		};
+};
 //rtl($.tableView);
+
+function shareMe(){
+    //alert("hi pop");
+    var desc="هذا التطبيق هو منصة لخدمة الأسرة المنتجة لعرض منتجاتها اونلاين سواء كانت مأكولات او حرف يدوية او غيرها من الاشياء التي تقوم بإنتاجها الأسرة ولا تستطيع تسويقها او عرضها في خارج نطاق المنزل لأي ظرف من الظروف . كما يتيح هذا التطبيق للأسرة فرصة ذهبية للترويج عن منتجاتها من خلال منصة متكامله تجمع جميع المنتجات وتضمن رواجها على نطاق واسع" ;
+  // var desc="test test";
+    var appIcon=$.img;//Ti.UI.createImageView({image:"/img/cancel.png"});
+   // try{
+        if (OS_IOS) {
+          // Ti.Platform.openURL("http://maps.apple.com/?saddr=[30.1399928%2C31.3935582]&daddr=[30.07342838430457%2C31.345820014453125]"); 
+        //var desc=responseData.name+","+responseData.sub_cat +" \n "+responseData.share_url;
+        sharedata(appIcon,desc);
+        }else{
+           // var desc=responseData.name+","+responseData.sub_cat +" \n "+responseData.share_url;
+            sharedata(appIcon,desc);
+        };
+   // }catch(e){alert(e.message);};
+  // appIcon=null;desc=null;
+	};
