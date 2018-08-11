@@ -1,0 +1,29 @@
+
+".container" : {
+  height:45
+}
+
+"#deptView":{
+	height:40,
+	top:0,
+	backgroundColor:"#EEEEEE",
+	width:"90%",
+	borderRadius:7
+	
+}
+
+"#lbldepartment":{
+	backgroundColor:"#EEEEEE",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	color:"#424242",
+	font:{fontSize:14},
+	right:45
+	
+}
+
+
+"#img":{
+	width:25,
+	right:10,
+	image:"/img/check-box-empty.png"
+}

@@ -1,0 +1,16 @@
+<Alloy>
+	<Window class="container">
+	<View class="container" >
+		<View top="60" class="lv">
+			<View height="Titanium.UI.SIZE" >
+			<TextField id="txtSearch"></TextField>
+			<Button id="btnSearch" onClick="getDataItem"></Button>
+			
+		</View>
+		<TableView id="tbl" top="10"> 
+			<Require src="/view/footerView"></Require>
+		</TableView>
+		</View>
+	</View>
+	</Window>
+</Alloy>

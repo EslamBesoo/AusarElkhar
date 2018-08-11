@@ -134,12 +134,12 @@ function sharedata(e,_status){
     var directory = Ti.Filesystem.getFile(Ti.Filesystem.externalStorageDirectory, 'pictures/shareing');
     !directory.exists() && directory.createDirectory();
     
-      var fileToShare = Ti.Filesystem.getFile(directory.resolve(), 'aldallal.jpg');
+      var fileToShare = Ti.Filesystem.getFile(directory.resolve(), 'logo.jpg');
     fileToShare.write(e.toImage());   
-    _status=_status+"\n تحميل التطبيق من "+"https://play.google.com/store/apps/details?id=com.digitaldesign.aldallaal";
+  //  _status=_status+"\n تحميل التطبيق من "+"https://play.google.com/store/apps/details?id=com.digitaldesign.aldallaal";
     }else{
     var img = e.toImage();
-        fileToShare = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'aldallal.jpg');
+        fileToShare = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'logo.jpg');
          fileToShare.write(e.toImage());  
    // fileToShare = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'tempimage.jpg');
 };
@@ -147,10 +147,10 @@ function sharedata(e,_status){
 Ti.API.info('share: '+_status);
     var socialWidget=Alloy.createWidget('com.alcoapps.socialshare');
     socialWidget.share({
-        status:_status+"\n تحميل التطبيق من "+"https://play.google.com/store/apps/details?id=com.digitaldesign.aldallaal",
+        status:_status+"\n تحميل التطبيق من "+"https://play.google.com/store/apps/details?id=com.isapapps.osarelkheir",
         //androidDialogTitle:"Share With",
         image:fileToShare.nativePath,
-        androidDialogTitle  :"الدلال",
+        androidDialogTitle  :"اسر الخير",
         });
 }
 

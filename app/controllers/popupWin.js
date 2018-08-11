@@ -66,10 +66,27 @@ function intiCategory(){
                 };//end for
 
              }else{Ti.API.info(JSON.stringify(_response));};//end if
-    },"get_store_category?store_id=20","allSections",$.popupWin);
+    },"get_store_category?store_id="+args.cID,"allSections",$.popupWin);
     }catch(e){alert(e.message);};
 };
 
+
+function intiAllCategory(){
+	try{
+	   _getService.getservice(function(_response){
+        
+        if (_response.success) {  datax=_response.data.Data;  
+             for ( var i=0; i <datax.length ; i++) {
+             	    var rowItem={id:datax[i].catagory_id,title:datax[i].name};
+                     var rowController=Alloy.createController('row/rowSelectedItem',rowItem);
+                     $.tbl.appendRow(rowController.getView(),true);
+                   
+                };//end for
+
+             }else{Ti.API.info(JSON.stringify(_response));};//end if
+    },"get_category","allSections",$.popupWin);
+    }catch(e){alert(e.message);};
+};
 
 function intiStore(){
 	try{
@@ -98,8 +115,8 @@ function returnData(){
 		intiStore();
 	}else if(args.param=="cat"){
 		intiCategory();
-	}else{
-		intiCities();
+	}else if (args.param=="allcat"){
+		intiAllCategory();
 	};
 	
 };

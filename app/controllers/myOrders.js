@@ -21,7 +21,7 @@ var x={
 		    		    try{
 
 					var waittingOrder= _response.data.Data.waitting;
-					Ti.API.info("All wat: "+JSON.stringify(waittingOrder));
+					Ti.API.info("All Invoices: "+JSON.stringify(_response));
 					var preparationOrder= _response.data.Data.preparation;
 					var onTheWayOrder= _response.data.Data.onTheWay;
 					var DoneOrder= _response.data.Data.Done;
@@ -29,39 +29,42 @@ var x={
 					
 						for (var i=0; i < waittingOrder.length; i++) {
 							 var rowItem= waittingOrder[i];
-							Ti.API.info(waittingOrder.length+' cart inv: '+JSON.stringify(rowItem));
+							Ti.API.info(waittingOrder.length+' cart waittingOrder: '+JSON.stringify(rowItem));
 							 //var rowController=Alloy.createController('row/rowStorOrder',rowItem);
 							// $.tbl.appendRow(rowController.getView() , true);
-							  getInv(waittingOrder[i]);
+							  getInv(waittingOrder[i],0);
 							 };//End for
 						rowItem=null;
 						rowController=null;
 						
 						for (var i=0; i < preparationOrder.length; i++) {
 							 var rowItem= preparationOrder[i];
+							 Ti.API.info(preparationOrder.length+' cart preparationOrder: '+JSON.stringify(rowItem));
 							// var rowController=Alloy.createController('row/rowStorOrder',rowItem);
 							 //$.tbl.appendRow(rowController.getView() , true);
-							  getInv(preparationOrder[i]);
+							  getInv(preparationOrder[i],1);
 						};//End for
 						_Service=null;
 						rowItem=null;
 						rowController=null;
-						
+						/*
 						for (var i=0; i < onTheWayOrder.length; i++) {
 							 var rowItem= onTheWayOrder[i];
+							 Ti.API.info(onTheWayOrder.length+' cart onTheWayOrder: '+JSON.stringify(rowItem));
 							 // var rowController=Alloy.createController('row/rowStorOrder',rowItem);
 							 //$.tbl.appendRow(rowController.getView() , true);
-							  getInv(onTheWayOrder[i]);
+							//  getInv(onTheWayOrder[i],2);
 						};//End for
 						
 						rowItem=null;
 						rowController=null;
-						
+						*/
 						for (var i=0; i < DoneOrder.length; i++) {
 							 var rowItem= DoneOrder[i];
+							  Ti.API.info(DoneOrder.length+' cart DoneOrder: '+JSON.stringify(rowItem));
 							 // var rowController=Alloy.createController('row/rowStorOrder',rowItem);
 							// $.tbl.appendRow(rowController.getView() , true);
-							  getInv(DoneOrder[i]);
+							  getInv(DoneOrder[i],2);
 						};//End for
 						
 						rowItem=null;
@@ -83,16 +86,16 @@ var x={
 
 	
 
-function getInv(data){
-	Ti.API.info("All: "+JSON.stringify(data));
+function getInv(data,status){
+	//Ti.API.info("All: "+JSON.stringify(data));
 	
 	var datastor={phone:data.phone,name:data.name};
 	var data=data.carts;
-	Ti.API.info("stor: "+JSON.stringify(datastor));
+	//Ti.API.info("stor: "+JSON.stringify(datastor));
 	for (var i=0; i < data.length; i++) {
 							 var rowItem= data[i];
 							 //Ti.API.info('cart inv: '+JSON.stringify(waittingOrder));
-							 var rowController=Alloy.createController('row/rowOrder',{data:rowItem,id:0,storeData:datastor,userType:"user"});
+							 var rowController=Alloy.createController('row/rowOrder',{data:rowItem,id:status,storeData:datastor,userType:"user"});
 							 $.tbl.appendRow(rowController.getView() , true);
 							 //waitItem(waittingOrder[i].Proudcts);
 						};//End for

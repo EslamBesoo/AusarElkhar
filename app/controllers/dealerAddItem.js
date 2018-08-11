@@ -26,14 +26,19 @@ function getStore(){
 
 
 function getCategory(){ 
-	 var x={
+	if (($.lblStore.className!=undefined)&&($.lblStore.className!=null)) {
+		var x={
 			 	title:$.lblCategory.objName,
 			 	param:"cat",
 			 	cont:$.lblCategory,
 			 	cID:$.lblStore.className
+			 	
 		 	};
 		 	//alert(JSON.stringify(x));
-   Alloy.createController("popupWin",x).getView().open(); 
+   Alloy.createController("popupWin",x).getView().open();
+	} else{
+		  toast("حدد المحل اولا");
+	};
 };
 
 
@@ -121,7 +126,7 @@ Ti.Android.requestPermissions(permissions, function(e) {
 
 function addNewItem(url){
 	var x={
-		product_id:args.data.proudct_id,
+		//product_id:args.data.proudct_id,
 		name:$.txtTitle.value,
 		price:$.txtPrice.value,
 		details:$.txtDesc.value,
@@ -136,7 +141,7 @@ function addNewItem(url){
         if (_response.success) { 
         	if (_response.data.Flag){
         	 datax=_response.data.Data;  
-           
+           toast("تم اضافة المنتج");
              
              
 }else{toast(_response.data.Massage);};//end if Flag
@@ -163,8 +168,7 @@ function updateItemData(url){
         if (_response.success) { 
         	if (_response.data.Flag){
         	 datax=_response.data.Data;  
-           
-             
+            toast("تم تعديل بيانات المنتج");
              
 }else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if

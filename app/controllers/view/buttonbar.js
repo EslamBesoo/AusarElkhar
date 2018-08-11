@@ -5,7 +5,7 @@ if (args=="mainApp") {
 	$.vHome.backgroundColor="#4abfe8";
 	$.imgMain.image="/images/btn/other/home.png";
 	$.lblMain.color="#ffffff";
-}else if (args=="SearchApp") {
+}else if (args=="SearchItem") {
 	$.vSearch.backgroundColor="#4abfe8";
 	$.imgSearch.image="/images/btn/other/home.png";
 	$.lblSearch.color="#ffffff";
@@ -20,7 +20,7 @@ function openMyOrder(){
 	closeAll();
 	if (args!="cartList") {
 		var x={title:$.lblCart.text,back:true};
-	    var win= Alloy.Globals.Navigator.open("cartList",x); 
+	    Alloy.Globals.Navigator.open("cartList",x); 
 		
 	}
 };
@@ -29,21 +29,33 @@ function openOrder(){
 	closeAll();
 	if (args!="myOrders") {
 		var x={title:$.lblOrder.text,back:true};
-	    var win= Alloy.Globals.Navigator.open("myOrders",x); 
+	    Alloy.Globals.Navigator.open("myOrders",x); 
 		
 	}
 	
 };
 
 function openMap(){
-	/*closeAll();
-	var x={title:$.lblorder.text,back:true};
-	    var win= Alloy.Globals.Navigator.open("myOrders",x); */
+	closeAll();
+	if (args!="SearchItem") {
+	var x={title:$.lblSearch.text,back:true};
+	  Alloy.Globals.Navigator.open("SearchItem",x); 
+	 }
 };
 
 function openMain(){
 	if (args!="mainApp") {
 		closeAll();
+		 for (var i=0; i < mainSec.length; i++) {
+                 try{
+                 	
+                         var winx= mainSec[i];
+                         if (winx.id=="mainStore") {
+                          	winx.close();
+                          	};
+                          	 
+                 }catch(e){};
+                };
 	}
 };
 

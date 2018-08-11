@@ -1,7 +1,6 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 var FirebaseCore = require('firebase.core');
-
 var fcm = require('firebase.cloudmessaging');
 var geo = require('ti.geolocation.helper');
 var _Service=require("xhrService");
@@ -60,30 +59,7 @@ fcm.createNotificationChannel({
 });
        
 Ti.API.info('createNotificationChannel Done android');
-// var CloudPush = require('ti.cloudpush');
-// CloudPush.showTrayNotificationsWhenFocused = true;
-// CloudPush.debug = true;
-// CloudPush.focusAppOnPush = true;
-// // CloudPush.retrieveDeviceToken({
-    // // success: function deviceTokenSuccess(e) {
-        // // // Use this device token with Ti.Cloud.PushNotifications calls
-        // // // to subscribe and unsubscribe to push notification channels
-        // // Ti.API.info('Device Token: ' + e.deviceToken);
-    // // },
-    // // error: function deviceTokenError(e) {
-        // // alert('Failed to register for push! ' + e.error);
-    // // }
-// // });
-// // These events monitor incoming push notifications
-// CloudPush.addEventListener('callback', function (evt) {
-    // alert(evt.payload);
-// });
-// CloudPush.addEventListener('trayClickLaunchedApp', function (evt) {
-    // Ti.API.info('Tray Click Launched App (app was not running)');
-// });
-// CloudPush.addEventListener('trayClickFocusedApp', function (evt) {
-    // Ti.API.info('Tray Click Focused App (app was already running)');
-// });
+
 };
 
 fcm.addEventListener('didRefreshRegistrationToken', onToken);

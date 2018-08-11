@@ -6,7 +6,7 @@
 "#dealerDataView":{
 	
 	top:0,
-	height:60,
+	height:30,
 	backgroundColor:"#ebebeb"
 }
 
@@ -31,6 +31,16 @@
 	top:0,
 	text:"ساعات سويسري"
 }
+
+'#lblLogout': {
+	font:{fontSize:"14dp"},
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	color:"red",
+	left:10,
+	top:0,
+	text:"تسجيل الخروج"
+}
+
 
 '#lblname': {
 	font:{fontSize:14},

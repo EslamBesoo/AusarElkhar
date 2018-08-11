@@ -5,11 +5,12 @@
 				<View id="dealerDataView">
 				
 				<Label id="lblTitle"> </Label>
+				<Label id="lblLogout" onClick="logOut"> </Label>
 				
-				<Button title="تعديل" left="10" bottom="5" width="70" height="30"></Button>
+				<Button title="تعديل" left="10" bottom="5" width="70" height="30" visible="false"></Button>
 				 <View height="1" backgroundColor="#4abfe8" bottom="0"></View>
 			</View>
-			<ImageView id="imgNews" image="/img/user.png" ></ImageView>
+			
 			<TableView id="tbl" top="10" >
 				<Require src="/view/footerView"></Require>
 			</TableView>

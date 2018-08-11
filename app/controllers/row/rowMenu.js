@@ -12,3 +12,9 @@ function changeColor(){
 
 
 function resetColor(){$.vx.backgroundColor="#ffffff";};
+
+
+if (args.title=="") {
+	$.row.height=1;
+	$.vx.backgroundColor="#BDBDBD";
+};

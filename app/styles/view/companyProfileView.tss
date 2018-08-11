@@ -9,19 +9,20 @@
 "#logoView":{
 	top:0,
 	backgroundColor:"#ffffff",
-	height:"30%",
+	height:"35%",
 }
 
 "#dataView":{
-	top:0,
+	top:10,
 	backgroundColor:"#EEEEEE",
-	height:80,
+	height:Titanium.UI.SIZE,
 }
 
 "#btnView":{
-	top:10,
+	bottom:0,
 	backgroundColor:"#e0e0e0",
 	height:40,
+	zIndex:10000,
 }
 
 
@@ -31,7 +32,8 @@
 
 ".imgx":{
 	height:15,
-	width:15
+	width:15,
+	right:"5"
 }
 
 ".btnlbl":{
@@ -59,6 +61,65 @@
 "#lblTitle":{
 	color:"#616161",
 	font:{fontSize:15,
+	fontWeight: 'bold',
 	fontFamily: Alloy.Globals.fontType
 	},
+}
+
+
+"#lblDesc":{
+	color:"#757575",
+	font:{fontSize:14,
+	fontFamily: Alloy.Globals.fontType},
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	width:"90%",
+	height:Titanium.UI.SIZE,
+
+}
+
+
+////////////     rate View   ////////////////////
+"#txtSearch":{
+	width:"90%",
+	hintText:" اكتب تعليقك ",
+	height:60,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	
+}
+
+"#lblterms":{
+	top:5,
+	width:"90%",
+	text:" اتعهد واقسم بالله ان تقيمي علي تعاملاتي مع التاجر وان ما اكتبة صحيح ويشهد الله علي صدقة  ",
+	color:"red",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	font:{fontSize:13}
+	
+}
+
+"#btnSearch":{
+	width:"40%",
+	title:" ارسال ",
+	bottom:50
+	
+}
+
+"#rateView":{
+	height:Titanium.UI.SIZE,
+	top:10,
+	//backgroundColor:"red",
+	width:Titanium.UI.SIZE
+}
+
+
+".img":{
+	left:15,
+	width:30
+}
+
+
+"#imgTerms":{
+	width:15,
+	right:20,
+	image:"/img/check-box-empty.png"
 }

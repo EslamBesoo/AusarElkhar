@@ -1,0 +1,20 @@
+
+".container" : {
+  
+}
+
+"#txtSearch":{
+	width:"70%",
+	left:10,
+	hintText:"بحث باسم المنتج",
+	//height:35,
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
+	
+}
+
+"#btnSearch":{
+	width:"20%",
+	title:" بحث ",
+	right:10
+	
+}

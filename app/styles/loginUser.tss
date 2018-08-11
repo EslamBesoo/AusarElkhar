@@ -2,30 +2,16 @@
 ".container" : {
   
 }
-
-// Setting TextField
-'TextField': {
-	color:"#424242",
-	backgroundColor:"#ebebeb",
-	borderColor:"#ebebeb",
-	borderWidth:1,
-	font:{fontSize:14},
-	width:"90%",
-	height:35,
-    top:10,
-	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
-	
-}
-
+ 
 
 "#recPass":{
 	font:{fontSize:14},
 }
 "#txtEmail":{
-	value:"aymanmega2288@gmail.com"
+	//value:"aymanmega2288@gmail.com"
 }
 
 
 "#txtPassword":{
-	value:"123456"
+	//value:"123456"
 }

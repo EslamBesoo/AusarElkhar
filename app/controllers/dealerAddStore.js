@@ -2,7 +2,40 @@
 var args = $.args;
 var _getService=require("xhrService");
 //alert(JSON.stringify(args.data));
+var geo = require('ti.geolocation.helper');
 var myavaCover="";
+var cat=[];
+if (Ti.App.Properties.getString("userLat") == null) {
+      setTimeout(function(){
+         geo.getLocation({success: success, error: error});
+   },1000);
+};
+function success(_location) {
+      Ti.App.Properties.setString("userLat",_location.latitude);
+     Ti.App.Properties.setString("userLon",_location.longitude);
+      Alloy.Globals.userLon = _location.longitude;
+      Alloy.Globals.userLat = _location.latitude;
+    
+            }
+
+function error(_error) {
+                  var dialog = Ti.UI.createAlertDialog({
+    //cancel: 1,
+    buttonNames: ['Confirm'],
+    message: "You must Grant Location Permission to add a Store !",
+    title: "Sorry , Permission Denied"
+  });
+  dialog.addEventListener('click', function(e) {
+    if (e.index === e.source.cancel) {
+      //Ti.API.info('The cancel button was clicked');
+    }else{
+          $.dealerAddStore.close(); 
+    }
+    
+  });
+  dialog.show();
+                  
+            }
 function reg(){
 	if (($.txtTitle.value=="") || ($.txtPrice.value=="") || ($.txtDesc.value=="")  ) {
 		toast("من فضلك املاء كل البيانات");
@@ -17,7 +50,7 @@ function reg(){
 function getCategory(){ 
 	 var x={
 			 	title:$.lblCategory.objName,
-			 	param:"cat",
+			 	param:"allcat",
 			 	cont:$.lblCategory,
 		 	};
 		 	//alert(JSON.stringify(x));
@@ -25,6 +58,7 @@ function getCategory(){
 };
 
 function getCity(){
+	if (($.lblCity.className!=undefined)&&($.lblCity.className!="null")) {
 	 var x={
 			 	title:$.lblArea.objName,
 			 	param:"city",
@@ -32,6 +66,9 @@ function getCity(){
 			 	cID:$.lblCity.className,
 		 	};
    Alloy.createController("popupWin",x).getView().open(); 
+   } else{
+		  toast("حدد البلد اولا");
+	};
 };
 
 
@@ -127,17 +164,21 @@ Ti.Android.requestPermissions(permissions, function(e) {
 });
 };
 
-
+ 
+     
 
 function addNewItem(url){
+	
+	cat.push[$.lblCategory.className];
 	var x={
 		name:$.txtTitle.value,
-		lat:"30.116516516",
-		lon:"31.515616516",
+		lat:Ti.App.Properties.getString("userLat"),
+		lon:Ti.App.Properties.getString("userLon"),
 		phone:$.txtPrice.value,
-		address:$.txtDesc.value,
+		address:$.txtAddress.value,
+		note:$.txtDesc.value,
 		user_id:Ti.App.Properties.getString("userstoreID"),
-		category_id:[3,2,1],//$.lblCategory.className,
+		category_id:cat,//[3,2,1],//$.lblCategory.className,
 		country_id:$.lblCity.className,
 		city_id:$.lblArea.className,
 		img:$.imgNews.toImage()
@@ -149,8 +190,8 @@ function addNewItem(url){
         if (_response.success) { 
         	if (_response.data.Flag){
         	 datax=_response.data.Data;  
-           
-             
+            Ti.App.fireEvent("resetStorData");
+              toast("تم اضافة المحل");
              
 			}else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if
@@ -176,8 +217,8 @@ function updateItemData(url){
         if (_response.success) { 
         	if (_response.data.Flag){
         	 datax=_response.data.Data;  
-           
-             
+            Ti.App.fireEvent("resetStorData");
+             toast("تم تعديل بيانات المحل");
              
 }else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if
@@ -194,10 +235,33 @@ if (args.type=="update") {
 	$.imgNews.image=args.data.image;
 	$.lblCity.className=args.data.country_id;
 	$.lblCity.text=args.data.country_name;
-	
+	$.txtPrice.editable=false;
 	$.lblArea.className=args.data.city_id;
 	$.lblArea.text=args.data.city_name;
 	//$.lblCategory.className=args.data.category_id;
 	//$.lblCategory.className=args.data.category_id;
 	
 };
+//getCategry();
+function getCategry(){
+	try{
+	   _getService.getservice(function(_response){
+        
+        if (_response.success) {  datax=_response.data.Data;  
+             for ( var i=0; i <datax.length ; i++) {
+             	    var rowItem=datax[i];
+                     var rowController=Alloy.createController('row/rowDepartment',rowItem);
+                     $.tbl.appendRow(rowController.getView(),true);
+                   
+                };//end for
+
+             }else{Ti.API.info(JSON.stringify(_response));};//end if
+    },"get_category","allSections",$.dealerAddStore);
+    }catch(e){alert(e.message);};
+};
+
+
+function setCat(e){
+	Ti.API.info('rew selected: '+JSON.stringify(e.row));
+};
+

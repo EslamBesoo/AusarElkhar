@@ -1,0 +1,18 @@
+<Alloy>
+	<Window class="container">
+	<View class="container" >
+		<View height="85" top="80">
+			<TextArea id="txtSearch"></TextArea>
+			
+		</View>
+		<View id="rateView" class="lh">
+			<ImageView id="img1" image="/images/store/star.png" onClick="img1"></ImageView>
+			<ImageView id="img2" image="/images/store/star.png" onClick="img2"></ImageView>
+			<ImageView id="img3" image="/images/store/star.png" onClick="img3"></ImageView>
+			<ImageView id="img4" image="/images/store/star.png" onClick="img4"></ImageView>
+			<ImageView id="img5" image="/images/store/star.png" onClick="img5"></ImageView>
+		</View>
+		<Button id="btnSearch" onClick="sendComment"></Button>
+	</View>
+	</Window>
+</Alloy>

@@ -1,15 +1,24 @@
 <Alloy>
 	<Window class="container">
 		<View id="content" backgroundColor="white">
-			<View id="orderDataView" class="lv">
-				<Label id="lblOrderID"></Label>
-				<Label id="lblOrderDate"></Label>
-				<Label id="lblOrderCost"></Label>
-				<Label id="lblOrderAddress"></Label>
+			<View height="40" backgroundColor="#EEEEEE" top="60" id="topView">
+				<Label id="lblOrderType" ></Label>
+				<View id="vswich">
+					 <Label id="lblstatusOrder"  onClick="changeStatusOrder" color="#ffffff"></Label>
+					</View>
 			</View>
-			<TableView id="tbl" top="170" >
-				<Require src="/view/footerView"></Require>
-			</TableView>
+			<View top="110" class="lv">
+				<View id="orderDataView" class="lv">
+					<Label id="lblOrderID"></Label>
+					
+					<Label id="lblOrderDate"></Label>
+					<Label id="lblOrderCost"></Label>
+					<Label id="lblOrderAddress"></Label>
+				</View>
+				<TableView id="tbl">
+					<Require src="/view/footerView"></Require>
+				</TableView>
+			</View>
 		</View>
 	</Window>
 </Alloy>

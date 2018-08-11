@@ -4,6 +4,9 @@ var _getService=require("xhrService");
 
  Ti.App.Properties.setString("catID",args.id);
 
+
+	 Ti.App.Properties.getString("userLat");
+     Ti.App.Properties.getString("userLon");
 inti();
 function inti(){
 

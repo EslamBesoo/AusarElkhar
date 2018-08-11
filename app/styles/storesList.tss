@@ -2,3 +2,10 @@
 ".container" : {
   
 }
+
+
+"#controlView":{
+	height:40,
+	top:60,
+	backgroundColor:"#ebebeb"
+}

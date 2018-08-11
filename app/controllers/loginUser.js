@@ -28,18 +28,21 @@ function loginUserData(){
 		              	  Ti.App.Properties.setString("userstoreID",datax.user_data.user_id);
 		              Ti.App.Properties.setString("userstoreName",datax.user_data.fullname);
 		              
-		              var x={title:"اسر الخير - ادارة المحلات",back:true,data:datax.stores,userType:"dealer"};
+		              var x={title:"اسر الخير - ادارة المحلات",data:datax.stores,userType:"dealer"};
          			  Alloy.Globals.Navigator.open("mainStore",x); 
+         			  Ti.App.fireEvent("activeDealer");
 		              } else{
 		              	
 		              Ti.App.Properties.setString("userID",datax.user_id);
 		              Ti.App.Properties.setString("userName",datax.fullname);
-		              Ti.App.fireEvent("activeUser");
+		             
 		              Ti.App.Properties.setString("userType","User");
 		              closeAll();
+		               Ti.App.fireEvent("activeUser");
 		              var x={title:"سلة الشراء",back:true};
 	    				Alloy.Globals.Navigator.open("cartList",x); 
-};
+	    				
+						};
 		 			  datax=null;
 		 			  
 		 			  
@@ -85,3 +88,7 @@ function sendInvoice(xdata){
 			
 
 };
+
+ if ((Ti.App.Properties.getString("userstoreID")==null) || (Ti.App.Properties.getString("userstoreID")=="undefined")){
+			$.btnDealer.visible=true;
+		}else{$.btnDealer.visible=false;};

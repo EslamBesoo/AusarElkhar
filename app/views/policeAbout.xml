@@ -1,0 +1,10 @@
+<Alloy>
+		<Window class="container">
+		<View id="content">
+	<ScrollView class="lv" scrollType="vertical"  layout="vertical"   top="70" visible="true">
+			<Label id="lblTitle"></Label>
+
+		</ScrollView>
+			</View>
+	</Window>
+</Alloy>
