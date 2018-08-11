@@ -126,7 +126,7 @@ Ti.Android.requestPermissions(permissions, function(e) {
 
 function addNewItem(url){
 	var x={
-		product_id:args.data.proudct_id,
+		//product_id:args.data.proudct_id,
 		name:$.txtTitle.value,
 		price:$.txtPrice.value,
 		details:$.txtDesc.value,

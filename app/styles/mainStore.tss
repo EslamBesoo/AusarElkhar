@@ -32,6 +32,16 @@
 	text:"ساعات سويسري"
 }
 
+'#lblLogout': {
+	font:{fontSize:"14dp"},
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	color:"red",
+	left:10,
+	top:0,
+	text:"تسجيل الخروج"
+}
+
+
 '#lblname': {
 	font:{fontSize:14},
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,

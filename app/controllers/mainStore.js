@@ -36,6 +36,8 @@ function getStores(){
 };
 
 
+Ti.API.info('location : '+Ti.App.Properties.getString("userLat")+"    "+ Ti.App.Properties.getString("userLon") );
+
 
 Ti.App.addEventListener("resetStorData",getStores);
 getStores();
@@ -51,3 +53,41 @@ control.addEventListener('refreshstart',function(e){
        //checkGPSData();
     }, 2000);
 });
+
+
+function logOut(){
+	 Ti.App.Properties.setString("userstoreID",null);
+	 Ti.App.Properties.setString("userstoreName",null);
+	 Ti.App.fireEvent("activeDealer");
+	 closeAllWin();
+};
+
+Ti.App.addEventListener("resetStorData",getStores);
+getStores();
+
+
+ function closeAllWin(){
+       //  if (OS_ANDROID) {
+        for (var i=0; i < appSec.length; i++) {
+                 try{
+                         var winx= appSec[i];
+                         Ti.API.info('winx: '+winx.id);
+                          	winx.close();
+                          	 //Ti.App.fireEvent("activeUser");
+                 }catch(e){};
+                };
+                 for (var i=0; i < mainSec.length; i++) {
+                 try{
+                 	
+                         var winx= mainSec[i];
+                         if (winx.id=="mainStore") {
+                          	winx.close();
+                          	};
+                          	 
+                 }catch(e){};
+                };
+                
+               //  };
+    };
+
+

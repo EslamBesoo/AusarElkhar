@@ -14,7 +14,7 @@
 			<View id="btnPord" class="lv"  top="5" >
 				<Button title="تسجيل الدخول" onClick="loginUser" backgroundColor="#4abfe8" borderColor="#4abfe8"></Button>
 				<Button id="btnFace" title="انشاء مستخدم جديد" top="10"  backgroundColor="#f6a039" borderColor="#f6a039" onClick="go2reg"></Button>
-				<Button id="btnFace" title="انشاء تاجر جديد" top="10"  backgroundColor="#ffffff" borderColor="#4abfe8" onClick="go2regDealer" color="#4abfe8"></Button>
+				<Button id="btnDealer" title="انشاء تاجر جديد" top="10"  backgroundColor="#ffffff" borderColor="#4abfe8" onClick="go2regDealer" color="#4abfe8"></Button>
 			</View>
 			
 		</ScrollView>

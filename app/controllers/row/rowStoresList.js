@@ -26,12 +26,20 @@ function getStoreItem(){
 
 
 function openWhats(){
+	if (args.is_close==0) {
 	openWhtasApp(args.phone);
+		}else{
+   		toast("المحل مغلق الآن");
+   	};
 };
 
 
 function CallComp(){
+	if (args.is_close==0) {
 	Titanium.Platform.openURL('tel:'+args.phone);
+		}else{
+   		toast("المحل مغلق الآن");
+   	};
 };
 
 if (OS_IOS) {

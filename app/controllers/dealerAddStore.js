@@ -2,8 +2,42 @@
 var args = $.args;
 var _getService=require("xhrService");
 //alert(JSON.stringify(args.data));
+var geo = require('ti.geolocation.helper');
 var myavaCover="";
 var cat=[];
+
+if (Ti.App.Properties.getString("userLat") == null) {
+      setTimeout(function(){
+         geo.getLocation({success: success, error: error});
+   },1000);
+};
+function success(_location) {
+      Ti.App.Properties.setString("userLat",_location.latitude);
+     Ti.App.Properties.setString("userLon",_location.longitude);
+      Alloy.Globals.userLon = _location.longitude;
+      Alloy.Globals.userLat = _location.latitude;
+    
+            }
+
+function error(_error) {
+                  var dialog = Ti.UI.createAlertDialog({
+    //cancel: 1,
+    buttonNames: ['Confirm'],
+    message: "You must Grant Location Permission to add a Store !",
+    title: "Sorry , Permission Denied"
+  });
+  dialog.addEventListener('click', function(e) {
+    if (e.index === e.source.cancel) {
+      //Ti.API.info('The cancel button was clicked');
+    }else{
+          $.dealerAddStore.close(); 
+    }
+    
+  });
+  dialog.show();
+                  
+            }
+
 function reg(){
 	if (($.txtTitle.value=="") || ($.txtPrice.value=="") || ($.txtDesc.value=="")  ) {
 		toast("من فضلك املاء كل البيانات");
@@ -133,7 +167,7 @@ Ti.Android.requestPermissions(permissions, function(e) {
 };
 
  
-     ;
+
 
 function addNewItem(url){
 	
@@ -203,7 +237,7 @@ if (args.type=="update") {
 	$.imgNews.image=args.data.image;
 	$.lblCity.className=args.data.country_id;
 	$.lblCity.text=args.data.country_name;
-	
+	$.txtPrice.editable=false;
 	$.lblArea.className=args.data.city_id;
 	$.lblArea.text=args.data.city_name;
 	//$.lblCategory.className=args.data.category_id;
@@ -232,3 +266,4 @@ function getCategry(){
 function setCat(e){
 	Ti.API.info('rew selected: '+JSON.stringify(e.row));
 };
+

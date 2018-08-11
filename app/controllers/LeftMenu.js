@@ -69,9 +69,17 @@ var rowCount;
                 break;
                 
                 case 4:
-                closeAllWin();
-               var x={title:data[e.index].title};
+                if ((Ti.App.Properties.getString("userID")==null) || (Ti.App.Properties.getString("userID")=="undefined")){
+			 var x={title:data[e.index].title};
              Alloy.Globals.Navigator.open("loginUser",x); 
+		}else{
+               logOutUser();
+              }
+                
+                
+                
+                closeAllWin();
+              
                 
                 break;
                  
@@ -142,7 +150,10 @@ if (OS_IOS) {
                          var winx= appSec[i];
                          Ti.API.info('winx: '+winx.id);
                           	winx.close();
-                          	 Ti.App.fireEvent("activeUser");
+
+                          	 //Ti.App.fireEvent("activeUser");
+
+                          
                  }catch(e){};
                 };
                  for (var i=0; i < mainSec.length; i++) {
@@ -177,14 +188,21 @@ activeUser();
 function activeUser(){
 	if ((Ti.App.Properties.getString("userID")==null) || (Ti.App.Properties.getString("userID")=="undefined")) {
 			 $.officeName.text="زائـــر";
-			// Ti.API.info('leftMenu: '+JSON.stringify($.tableView.data[0].rows[6].visible=false)); 
-			 // $.tableView.data[0].rows[6].children[0].visible=false;
-			  //$.tableView.data[0].rows[6].children[1].visible=false;
-			  //$.tableView.data[0].rows[6].children[2].visible=false;
+			 $.tableView.data[0].rows[4].children[0].children[1].text="تسجيل الدخول";
+			// Ti.API.info('leftMenu: '+JSON.stringify($.tableView.data[0].rows[6])); 
+			 //$.tableView.data[0].rows[4].height=0;
+			  Ti.API.info('user Name '+Ti.App.Properties.getString("userName"));
+			 activeDealer();
 		}else{
+			$.tableView.data[0].rows[4].children[0].children[1].text="تسجيل الخروج";
 			$.officeName.text=Ti.App.Properties.getString("userName");
 		};
 		
+		
+};
+
+function activeDealer(){
+
 		if ((Ti.App.Properties.getString("userstoreID")==null) || (Ti.App.Properties.getString("userstoreID")=="undefined")) {
 			 $.officeName.text="زائـــر";
 		}else{
@@ -209,4 +227,16 @@ function shareMe(){
         };
    // }catch(e){alert(e.message);};
   // appIcon=null;desc=null;
+
 	};
+	
+
+function logOutUser(){
+	 closeAllWin();
+	 
+	 Ti.App.Properties.setString("userID",null);
+	 Ti.App.Properties.setString("userName",null);
+	 activeUser();
+	
+};
+
