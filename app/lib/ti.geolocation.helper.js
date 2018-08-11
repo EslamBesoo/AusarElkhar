@@ -51,6 +51,7 @@ function handlePermissions(_success) {
 
             } else if (OS_ANDROID) {
                   alert('You denied permission for now, forever or the dialog did not show at all because it you denied forever before.');
+                  Ti.App.fireEvent("checkPermission",{});
             } else {
 
                   // We already check AUTHORIZATION_DENIED earlier so we can be sure it was denied now and not before

@@ -18,8 +18,18 @@ function success(_location) {
       Alloy.Globals.userLat = _location.latitude;
     
             }
+            //
+Ti.App.addEventListener("checkPermission",function(e){
+      var hasLocationPermissions = Ti.Geolocation.hasLocationPermissions(Ti.Geolocation.AUTHORIZATION_ALWAYS);
+      Ti.API.info('Ti.Geolocation.hasLocationPermissions', hasLocationPermissions);
 
-function error(_error) {
+      if (hasLocationPermissions) {
+            
+      }else{
+            error();
+      }
+});
+function error() {
                   var dialog = Ti.UI.createAlertDialog({
     //cancel: 1,
     buttonNames: ['Confirm'],
