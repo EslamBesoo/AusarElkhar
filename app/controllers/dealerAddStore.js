@@ -5,6 +5,7 @@ var _getService=require("xhrService");
 var geo = require('ti.geolocation.helper');
 var myavaCover="";
 var cat=[];
+
 if (Ti.App.Properties.getString("userLat") == null) {
       setTimeout(function(){
          geo.getLocation({success: success, error: error});
@@ -36,6 +37,7 @@ function error(_error) {
   dialog.show();
                   
             }
+
 function reg(){
 	if (($.txtTitle.value=="") || ($.txtPrice.value=="") || ($.txtDesc.value=="")  ) {
 		toast("من فضلك املاء كل البيانات");
@@ -165,7 +167,7 @@ Ti.Android.requestPermissions(permissions, function(e) {
 };
 
  
-     
+
 
 function addNewItem(url){
 	
