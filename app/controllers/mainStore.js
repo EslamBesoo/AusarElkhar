@@ -62,6 +62,9 @@ function logOut(){
 	 closeAllWin();
 };
 
+Ti.App.addEventListener("resetStorData",getStores);
+getStores();
+
 
  function closeAllWin(){
        //  if (OS_ANDROID) {
@@ -86,3 +89,5 @@ function logOut(){
                 
                //  };
     };
+
+

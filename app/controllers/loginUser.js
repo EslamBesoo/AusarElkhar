@@ -44,7 +44,7 @@ function loginUserData(){
 	    				
 						};
 		 			  datax=null;
-		 			  
+		 			   Ti.App.fireEvent("activeUser");
 		 			  
 				}else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if

@@ -150,7 +150,10 @@ if (OS_IOS) {
                          var winx= appSec[i];
                          Ti.API.info('winx: '+winx.id);
                           	winx.close();
+
                           	 //Ti.App.fireEvent("activeUser");
+
+                          
                  }catch(e){};
                 };
                  for (var i=0; i < mainSec.length; i++) {
@@ -181,6 +184,7 @@ if (OS_IOS) {
     
    Ti.App.addEventListener("activeUser",activeUser);
 activeUser();
+
 function activeUser(){
 	if ((Ti.App.Properties.getString("userID")==null) || (Ti.App.Properties.getString("userID")=="undefined")) {
 			 $.officeName.text="زائـــر";
@@ -198,6 +202,7 @@ function activeUser(){
 };
 
 function activeDealer(){
+
 		if ((Ti.App.Properties.getString("userstoreID")==null) || (Ti.App.Properties.getString("userstoreID")=="undefined")) {
 			 $.officeName.text="زائـــر";
 		}else{
@@ -222,6 +227,7 @@ function shareMe(){
         };
    // }catch(e){alert(e.message);};
   // appIcon=null;desc=null;
+
 	};
 	
 
@@ -233,3 +239,4 @@ function logOutUser(){
 	 activeUser();
 	
 };
+
