@@ -65,4 +65,5 @@
 	font:{fontSize:15,
 	fontFamily: Alloy.Globals.fontType
 	},
+	maxLines:1
 }

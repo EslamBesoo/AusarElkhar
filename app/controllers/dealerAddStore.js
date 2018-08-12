@@ -181,7 +181,8 @@ Ti.Android.requestPermissions(permissions, function(e) {
 
 function addNewItem(url){
 	
-	cat.push[$.lblCategory.className];
+	cat=[];
+      cat.push(parseInt($.lblCategory.className));
 	var x={
 		name:$.txtTitle.value,
 		lat:Ti.App.Properties.getString("userLat"),
