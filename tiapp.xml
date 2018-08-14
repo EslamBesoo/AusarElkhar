@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.isapapps.osarelkheir</id>
     <name>AusarElkhar</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <publisher>nmounir</publisher>
     <url>undefined</url>
     <description>undefined</description>
@@ -78,9 +78,7 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-
         <manifest android:versionCode="8" android:versionName="1.4" android:windowSoftInputMode="stateHidden">
-
             <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -108,9 +106,7 @@
         <module platform="android">firebase.core</module>
         <module platform="android">firebase.cloudmessaging</module>
         <module platform="android" version="11.0.40">ti.playservices</module>
-
         <module platform="commonjs">ti.cloud</module>
-
     </modules>
     <deployment-targets>
         <target device="android">true</target>
