@@ -10,16 +10,19 @@
 	top:0,
 	backgroundColor:"#ffffff",
 	height:"35%",
+	width:"100%"
 }
 
 "#dataView":{
 	top:10,
 	backgroundColor:"#EEEEEE",
 	height:Titanium.UI.SIZE,
+	width:"100%"
 }
 
 "#btnView":{
 	bottom:0,
+	width:"100%",
 	backgroundColor:"#e0e0e0",
 	height:40,
 	zIndex:10000,

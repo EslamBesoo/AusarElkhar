@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container">
+	<Window class="container" onOpen="test">
 		<View class="container">
 				<View height="40" top="57" class="lh" zIndex="10000" id="subCat" onClick="xme" backgroundColor="#ebebeb">
 					<View id="tab1" width="48%" objName="0">

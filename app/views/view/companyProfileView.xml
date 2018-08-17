@@ -10,7 +10,7 @@
 			
 			<Label id="lblDesc"></Label>
 			
-			<View height="40" top="10">
+			<View height="40" top="10" width="100%">
 				<ImageView id="imgWhats" image="/images/store/open.png" left="60"  class="imgx"></ImageView>
 				<Label id="lblLocation" text="مفتوح" class="lblx" color="#757575"  left="10"></Label>
 				
@@ -20,7 +20,7 @@
 		</View>
 		
 		
-			<View height="85" top="10" backgroundColor="#EEEEEE">
+			<View height="85" top="10" backgroundColor="#EEEEEE" width="100%">
 			<TextArea id="txtSearch"></TextArea>
 		</View>
 		<View id="rateView" class="lh">
