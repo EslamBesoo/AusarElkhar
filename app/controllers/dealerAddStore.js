@@ -219,8 +219,8 @@ function updateItemData(url){
 	var x={
 		store_id:args.data.store_id,
 		name:$.txtTitle.value,
-		lat:"25.137406305168838",//Ti.App.Properties.getString("userLat"),//"25.137406305168838",//
-		lon:"46.5754260724932",//Ti.App.Properties.getString("userLon"),//"46.5754260724932",//
+		lat:Ti.App.Properties.getString("userLat"),//Ti.App.Properties.getString("userLat"),//"25.137406305168838",//
+		lon:Ti.App.Properties.getString("userLon"),//Ti.App.Properties.getString("userLon"),//"46.5754260724932",//
 		phone:$.txtPrice.value,
 		address:$.txtAddress.value,
 		note:$.txtDesc.value,
