@@ -164,17 +164,7 @@ function openGalImg(){
 };
 
 
-if (OS_ANDROID) {
-//permissions photo gallery
-var permissions = ['android.permission.CAMERA', 'android.permission.READ_EXTERNAL_STORAGE'];
-Ti.Android.requestPermissions(permissions, function(e) {
-    if (e.success) {
-        Ti.API.info("SUCCESS");
-    } else {
-        Ti.API.info("ERROR: " + e.error);
-    }
-});
-};
+
 
  
 
@@ -203,8 +193,9 @@ function addNewItem(url){
         if (_response.success) { 
         	if (_response.data.Flag){
         	 datax=_response.data.Data;  
+        	  toast("تم اضافة المحل");
             Ti.App.fireEvent("resetStorData");
-              toast("تم اضافة المحل");
+             
              
 			}else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if
@@ -229,9 +220,10 @@ function updateItemData(url){
         Ti.API.info('storeUserData: '+JSON.stringify(_response));
         if (_response.success) { 
         	if (_response.data.Flag){
-        	 datax=_response.data.Data;  
+        	 datax=_response.data.Data; 
+        	 toast("تم تعديل بيانات المحل"); 
             Ti.App.fireEvent("resetStorData");
-             toast("تم تعديل بيانات المحل");
+             
              
 }else{toast(_response.data.Massage);};//end if Flag
              }else{toast(_response.data.Massage);};//end if
@@ -278,3 +270,16 @@ function setCat(e){
 	Ti.API.info('rew selected: '+JSON.stringify(e.row));
 };
 
+$.dealerAddStore.addEventListener('open',function(){
+      if (OS_ANDROID) {
+//permissions photo gallery
+var permissions = ['android.permission.CAMERA', 'android.permission.READ_EXTERNAL_STORAGE'];
+Ti.Android.requestPermissions(permissions, function(e) {
+    if (e.success) {
+        Ti.API.info("SUCCESS");
+    } else {
+        Ti.API.info("ERROR: " + e.error);
+    }
+});
+};
+});

@@ -98,7 +98,7 @@ function getLocation(_args) {
                         }
                   });
             } else {
-                  //alert('Please enable location services');
+                  alert('Please enable location services');
             }
       }
 
