@@ -28,7 +28,7 @@
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT,
 	color:"#424242",
 	right:10,
-	top:0,
+	//top:0,
 	text:"ساعات سويسري"
 }
 
@@ -37,7 +37,7 @@
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_LEFT,
 	color:"red",
 	left:10,
-	top:0,
+	//top:0,
 	text:"تسجيل الخروج"
 }
 

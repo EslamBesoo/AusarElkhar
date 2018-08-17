@@ -2,9 +2,10 @@
 var args = $.args;
 var _getService=require("xhrService");
 $.popupWin.addEventListener('open',function(evt){
+	if (OS_ANDROID) {
                     var activity=$.popupWin.activity;
                     activity.actionBar.hide();
-                   
+                   };
                   returnData();
                 });
 function closeWin(){

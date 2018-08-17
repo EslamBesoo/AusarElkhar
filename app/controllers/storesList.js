@@ -8,14 +8,25 @@ var _getService=require("xhrService");
 	 Ti.App.Properties.getString("userLat");
      Ti.App.Properties.getString("userLon");
 inti();
-function inti(){
+var urlStore="get_store?category_id="+args.id;
+function getUrl(){
+	Ti.API.info('location lat: '+Ti.App.Properties.getString("userLat"));
+	if (Ti.App.Properties.getString("userLat")==null) {
+		toast("من فضلك افتح الموقع للوصول للأسر الاقرب اليك");
+		urlStore="get_store?category_id="+args.id;
+		
+	} else{urlStore="get_store?category_id="+args.id+"&lat="+Ti.App.Properties.getString("userLat")+"&lng="+Ti.App.Properties.getString("userLon");};
+};
 
+
+function inti(){
+getUrl();
     _getService.getservice(function(_response){
         if (_response.success) {  datax=_response.data.Data;  
         	setData(datax);
  Ti.API.info(JSON.stringify(_response));
              }else{Ti.API.info(JSON.stringify(_response));};//end if
-    },"get_store?category_id="+args.id,"storesList",$.storesList);
+    },urlStore,"storesList",$.storesList);
 };//end inti
 
 

@@ -80,7 +80,7 @@ exports.open=function(controller,payload){
                 };
 		   if ((win.id!="mainApp") && (win.id!="mainStore")) {
 		     appSec.push(drawer);
-		  }else{mainSec.push(win);};
+		  }else{mainSec.push(drawer);};
 		   
 		 }else {
 			 win.children[0].add(header);

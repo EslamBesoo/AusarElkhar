@@ -1,6 +1,6 @@
 <Alloy>
 	<View height="Titanium.UI.SIZE">
-		<ScrollView class="lv" scrollType="vertical"  layout="vertical"   top="20" visible="true">
+		<ScrollView class="lv" scrollType="vertical"  layout="vertical"   top="20" visible="true" width="100%">
 		<View id="logoView">
 			<ImageView id="img"></ImageView>
 		</View>
@@ -30,13 +30,13 @@
 			<ImageView class="img" id="img4" image="/images/store/star.png" onClick="img4"></ImageView>
 			<ImageView class="img" id="img5" image="/images/store/star.png" onClick="img5"></ImageView>
 		</View>
-		<View top="10" height="180">
+		<View top="10" height="180" width="100%">
 			<Label id="lblterms"></Label>
 			<Label id="lblterms" text="اوافق" right="50" top="50" color="#616161" onClick="termsRate"></Label>
 			<ImageView id="imgTerms" top="53"  onClick="termsRate"></ImageView>
 			<Button id="btnSearch" onClick="sendComment"></Button>
 		</View>
-		
+		 
 		
 		</ScrollView>
 		

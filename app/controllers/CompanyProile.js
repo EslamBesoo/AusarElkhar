@@ -16,11 +16,20 @@ function xme(x){
  
 function test(e){
 	if ($.form.getCurrentPage()==1) {
+		if (OS_IOS) {
+			$.CompanyProile.children[2].bottom=0;
+		}else{
 		$.CompanyProile.children[0].children[3].bottom=0;
+		};
 	}else{
-		$.CompanyProile.children[0].children[3].bottom=-100;
+		if (OS_IOS) {
+			$.CompanyProile.children[2].bottom=-100;
+		} else{
+			$.CompanyProile.children[0].children[3].bottom=-100;
+		};
+		
 	};
-	Ti.API.info(JSON.stringify($.CompanyProile.children[0].children[3].id));
+	Ti.API.info(JSON.stringify($.CompanyProile.children[2].id));
    for (var i=0; i < $.subCat.getChildren().length; i++) {
          $.subCat.children[i].children[1].visible=false;
     };

@@ -8,10 +8,10 @@
 	font:{fontSize:14},
 }
 "#txtEmail":{
-	//value:"aymanmega2288@gmail.com"
+	value:"aymanmega2288@gmail.com"
 }
 
 
 "#txtPassword":{
-	//value:"123456"
+	value:"123456"
 }
