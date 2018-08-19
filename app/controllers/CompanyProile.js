@@ -29,7 +29,7 @@ function test(e){
 		};
 		
 	};
-	Ti.API.info(JSON.stringify($.CompanyProile.children[2].id));
+	//Ti.API.info(JSON.stringify($.CompanyProile.children[2].id));
    for (var i=0; i < $.subCat.getChildren().length; i++) {
          $.subCat.children[i].children[1].visible=false;
     };

@@ -9,6 +9,7 @@ function checkAddress(){
 	}else{
 		 Ti.App.Properties.setString("myAddress",$.txtAddress.value);
 		args.data.address=Ti.App.Properties.getString("myAddress");
+		 args.data.user_id=Ti.App.Properties.getString("userID");
 		Ti.API.info('post Order : '+JSON.stringify(args.data));
 		 sendInvoice(args.data);
 	};

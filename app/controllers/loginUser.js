@@ -3,8 +3,8 @@ var args = $.args;
 var _getService=require("xhrService");
 //alert(JSON.stringify(args.data));
 function getoPassRec(){
-	//var x={title:"استعادة كلمة المرور",img:"mutooncat"};
-     //    Alloy.Globals.Navigator.open("passRec",x); 
+	var x={title:"استعادة كلمة المرور",back:true};
+         Alloy.Globals.Navigator.open("passRec",x); 
 };
 
 
@@ -39,8 +39,15 @@ function loginUserData(){
 		              Ti.App.Properties.setString("userType","User");
 		              closeAll();
 		               Ti.App.fireEvent("activeUser");
-		              var x={title:"سلة الشراء",back:true};
-	    				Alloy.Globals.Navigator.open("cartList",x); 
+		              Ti.API.info('pkQty: '+pkQty);
+             if (pkQty==0) {
+				  closeAll();
+	    		} else{
+	    			  closeAll();
+	    			var x={title:"سلة الشراء",back:true};
+	    		Alloy.Globals.Navigator.open("cartList",x); 
+	    		
+	    		};
 	    				
 						};
 		 			  datax=null;

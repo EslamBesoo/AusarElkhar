@@ -252,6 +252,7 @@ if (args.type=="update") {
 	$.btnAdd.title=args.title;
 	Ti.API.info('Update ITem Data: '+JSON.stringify(args));
 	$.txtTitle.value=args.data.name;
+	$.txtDesc.value=args.data.note;
 	$.txtPrice.value=args.data.phone;
 	$.txtAddress.value=args.data.address;
 	$.imgNews.image=args.data.image;

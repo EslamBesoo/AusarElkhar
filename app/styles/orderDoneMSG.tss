@@ -26,7 +26,6 @@
 	borderWidth:1,
 	font:{fontSize:14},
 	width:"90%",
-	height:35,
     top:80,
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_RIGHT
 	

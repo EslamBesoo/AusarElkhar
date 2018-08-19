@@ -43,13 +43,20 @@ function postUserData(){
         if (_response.success) { 
         	if (_response.data.Flag){
         	 datax=_response.data.Data;  
+        	 Ti.API.info('datax reg user: '+JSON.stringify(_response));
              Ti.App.Properties.setString("userID",datax.user_id);
              Ti.App.Properties.setString("userName",datax.fullname);
              Ti.App.fireEvent("activeUser");
-              args.data.user_id=Ti.App.Properties.getString("userID");
-             closeAll();
-				var x={title:"سلة الشراء",back:true};
+             
+           Ti.API.info('pkQty: '+pkQty);
+             if (pkQty==0) {
+				  closeAll();
+	    		} else{
+	    			  closeAll();
+	    			var x={title:"سلة الشراء",back:true};
 	    		Alloy.Globals.Navigator.open("cartList",x); 
+	    		
+	    		};
              
              
 }else{toast(_response.data.Massage);};//end if Flag

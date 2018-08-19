@@ -62,9 +62,8 @@ function logOut(){
 	 closeAllWin();
 };
 
-Ti.App.addEventListener("resetStorData",getStores);
-getStores();
-
+ //Ti.App.Properties.setString("userLat","25.137406305168838");
+ //Ti.App.Properties.setString("userLon","46.5754260724932");
 
  function closeAllWin(){
        //  if (OS_ANDROID) {

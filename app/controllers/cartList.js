@@ -18,7 +18,7 @@ function getData(){
    //$.tbl.data=[];
      _getdb.get2Cart(function(_response){
      	 $.lblTotal.text=0;
-         Ti.API.info("win Cart"+JSON.stringify(_response));
+        // Ti.API.info("win Cart"+JSON.stringify(_response));
         if (_response.data.length>0)  { 
         	if (_response.data) {
         		 datax=_response.data;setData(datax,_response.storData);
@@ -98,7 +98,7 @@ function SendItem(){
 
 function inti(){
 	var x={
-			store_id:1,
+			//store_id:1,
 			//total_price:totalCart,
 			//lat:"89.165165165",//Ti.App.Properties.getString("lat"),
 			//lon:"30.565161681",//Ti.App.Properties.getString("long"),
