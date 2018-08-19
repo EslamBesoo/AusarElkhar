@@ -1,8 +1,8 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
-var FirebaseCore = require('firebase.core');
-var fcm = require('firebase.cloudmessaging');
+
 var geo = require('ti.geolocation.helper');
+var onesignal = require('com.williamrijksen.onesignal');
 var _Service=require("xhrService");
       _Service.getservice(function(_response){
                          
@@ -27,109 +27,41 @@ var _Service=require("xhrService");
                               toast("لا يوجد محلات في هذه المنطقة ");
                         };
       },"get_category","itemList",$.mainApp);
-try{              
-      if (OS_ANDROID) {
-            FirebaseCore.configure({
-             file: "google-services.json"});
-      } else{
-           FirebaseCore.configure({
-             file: "GoogleService-Info.plist"}); 
-            
-      };
-      //FirebaseAnalytics.resetAnalyticsData();
-      //Ti.API.info('App Instance ID: ' + FirebaseAnalytics.appInstanceID);
-      
-      Ti.API.info('FirebaseCore configure Done');     
-      
-}catch(ex){
-      Ti.API.info('Error FireBase',ex);
-}
-
-
-///////////// FirebaseAnalytics //////////////////////
-try{
-
-if (OS_ANDROID) {
-      
-fcm.createNotificationChannel({
-    sound: 'default',
-    channelId: 'default',
-    channelName: 'General Notifications',
-    importance: 'high' //will pop in from the top and make a sound
-});
-       
-Ti.API.info('createNotificationChannel Done android');
-
-};
-
-fcm.addEventListener('didRefreshRegistrationToken', onToken);
-
-// Called when direct messages arrive. Note that these are different from push notifications
-fcm.addEventListener('didReceiveMessage', onMessage);
-
-fcm.registerForPushNotifications();
-
-// check if token is already available
-if (fcm.fcmToken !== null) {
-    Ti.API.info('FCM-Token', fcm.fcmToken);
-} else {
-    Ti.API.info('Token is empty. Waiting for the token callback ...');
-}
-
-// subscribe to topic
-fcm.subscribeToTopic('General');
 
 if (OS_IOS) {
-      
-Ti.App.iOS.addEventListener('usernotificationsettings', function eventUserNotificationSettings() {
-  // Remove the event again to prevent duplicate calls through the Firebase API
-  Ti.App.iOS.removeEventListener('usernotificationsettings', eventUserNotificationSettings);
-  
-  // Register for push notifications
-  Ti.Network.registerForPushNotifications({
-    success: deviceTokenSuccess,
-    error: deviceTokenError,
-    callback: receivePush // Fired for all kind of notifications (foreground, background & closed)
-  });
-  
-  // Register for Firebase Cloud Messaging
-      fcm.registerForPushNotifications();
-});
-
-// Register for the notification settings event
-Ti.App.iOS.registerUserNotificationSettings({
-  types: [
-    Ti.App.iOS.USER_NOTIFICATION_TYPE_ALERT,
-    Ti.App.iOS.USER_NOTIFICATION_TYPE_SOUND,
-    Ti.App.iOS.USER_NOTIFICATION_TYPE_BADGE
-  ]
-});
+      onesignal.promptForPushNotificationsWithUserResponse(function(obj) {
+        //alert(JSON.stringify(obj));
+    });
 };
-Ti.API.info('FirebaseCore configure Done IOS');
-}catch(ex){
-     Ti.API.info('Error FireBase',ex); 
-}
-///////////// FirebaseAnalytics //////////////////////
-function onToken(e) {
-    Ti.API.info('Token', e.fcmToken);
-}
+onesignal.addEventListener('notificationOpened', function (evt) {
+    //alert(evt);
+    if (evt) {
+        var title = '';
+        var content = '';
+        var data = {};
 
-function onMessage(e) {
-    Ti.API.info('Message', JSON.stringify(e.message));
-    Ti.API.info('Message', JSON.stringify(e));
-}
-function receivePush(e) {
-    Ti.API.info('Received push: ' + JSON.stringify(e));
-}
-// Save the device token for subsequent API calls
-function deviceTokenSuccess(e) {
-    deviceToken = e.deviceToken;
-}
- 
-function deviceTokenError(e) {
-    Ti.API.info('Failed to register for push notifications! ' + e.error);
-}
+        if (evt.title) {
+            title = evt.title;
+        }
 
+        if (evt.body) {
+            content = evt.body;
+        }
+
+        if (evt.additionalData) {
+            if (Ti.Platform.osname === 'android') {
+                // Android receives it as a JSON string
+                data = JSON.parse(evt.additionalData);
+            } else {
+                data = evt.additionalData;
+            }
+        }
+    }
+    Ti.API.info("Notification opened! title: " + title + ', content: ' + content + ', data: ' + evt.additionalData);
+});
+onesignal.addEventListener('notificationReceived', function(evt) {
+    Ti.API.info(' ***** Received! ' + JSON.stringify(evt));
+});
 //////////// Location //////////////////////
 $.mainApp.addEventListener('open',function(){
    setTimeout(function(){

@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.isapapps.osarelkheir</id>
     <name>AusarElkhar</name>
-    <version>1.2</version>
+    <version>1.3</version>
     <publisher>nmounir</publisher>
     <url>undefined</url>
     <description>undefined</description>
@@ -78,7 +78,7 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="9" android:versionName="1.5" android:windowSoftInputMode="stateHidden">
+        <manifest android:versionCode="10" android:versionName="1.6" android:windowSoftInputMode="stateHidden">
             <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -93,6 +93,9 @@
                 android:largeHeap="true" android:supportsRtl="true" android:theme="@style/appcelerator.NoActionBar">
                 <meta-data
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC4KSH1TxM6brkqu26nqE6XKRqJLDHGgWw"/>
+                <meta-data android:name="onesignal_app_id" android:value="d543c2d2-fd5c-4b1f-bf8a-ff0c86bcd891"/>
+                <meta-data
+                    android:name="onesignal_google_project_number" android:value="str:873638285814"/>
                 <activity android:label="@string/app_name" android:name=".MainActivity">
                     <!--  <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>-->
                 </activity>
@@ -100,13 +103,11 @@
         </manifest>
     </android>
     <modules>
-        <module platform="android">firebase.core</module>
-        <module platform="iphone" version="1.2.0">firebase.core</module>
         <module platform="iphone">dk.napp.drawer</module>
-        <module platform="iphone">firebase.cloudmessaging</module>
-        <module platform="android">firebase.cloudmessaging</module>
-        <module platform="android" version="11.0.40">ti.playservices</module>
+        <module platform="iphone">com.williamrijksen.onesignal</module>
         <module platform="commonjs">ti.cloud</module>
+        <module platform="android">com.williamrijksen.onesignal</module>
+        <module platform="android" version="11.0.40">ti.playservices</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -118,6 +119,8 @@
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
     <property name="appc-app-id" type="string">5b4ced2a5b69fb3f59a351c4</property>
+    <property name="OneSignal_AppID" type="string">d543c2d2-fd5c-4b1f-bf8a-ff0c86bcd891</property>
+    <property name="OneSignal_AppID" type="string">[d543c2d2-fd5c-4b1f-bf8a-ff0c86bcd891]</property>
     <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
     <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
     <property name="acs-oauth-secret-development" type="string">RD2KisHnkNtoRg08qx5onooHapRcszSk</property>
