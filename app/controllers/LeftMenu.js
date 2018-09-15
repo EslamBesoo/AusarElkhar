@@ -188,13 +188,21 @@ activeUser();
 function activeUser(){
 	if ((Ti.App.Properties.getString("userID")==null) || (Ti.App.Properties.getString("userID")=="undefined")) {
 			 $.officeName.text="زائـــر";
+			 try{
 			 $.tableView.data[0].rows[4].children[0].children[1].text="تسجيل الدخول";
+			 }catch(ex){
+			       Ti.API.info('ex',ex);
+			 }
 			// Ti.API.info('leftMenu: '+JSON.stringify($.tableView.data[0].rows[6])); 
 			 //$.tableView.data[0].rows[4].height=0;
 			  Ti.API.info('user Name '+Ti.App.Properties.getString("userName"));
 			 activeDealer();
 		}else{
+		       try{
 			$.tableView.data[0].rows[4].children[0].children[1].text="تسجيل الخروج";
+			}catch(ex){
+                         Ti.API.info('ex',ex);
+                   }
 			$.officeName.text=Ti.App.Properties.getString("userName");
 		};
 		

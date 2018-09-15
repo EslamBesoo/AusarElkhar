@@ -245,9 +245,10 @@ function go2Done(){
 
 function openWhtasApp(msgBody){
 	var whatsappUrl = encodeURI('whatsapp://send?phone=+20' + msgBody);
+	var newwhatsappUrl = encodeURI('https://wa.me/20'+msgBody);
     if (OS_IOS) {
-        if (Ti.Platform.canOpenURL(whatsappUrl)) {
-            Ti.Platform.openURL(whatsappUrl);
+        if (Ti.Platform.canOpenURL(newwhatsappUrl)) {
+            Ti.Platform.openURL(newwhatsappUrl);
         } else {
             Ti.Platform.openURL("https://itunes.apple.com/ae/app/whatsapp-messenger/id310633997?mt=8");
         }
